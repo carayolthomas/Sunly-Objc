@@ -10,9 +10,9 @@
 		210975CA2DB9DFADEBA43B27 /* Pods_Sunly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF682153FDFBF6A84EC754C8 /* Pods_Sunly.framework */; };
 		30588B83A2B93B0093BF632D /* Pods_SunlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9CF6F0047039A92762CD86 /* Pods_SunlyUITests.framework */; };
 		71A313982406F0DE0E6E8BB6 /* Pods_SunlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C7F5DB89A6D5FBE7658FD8 /* Pods_SunlyTests.framework */; };
+		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
+		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
-		AF9DECC621558CF100844449 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC521558CF100844449 /* ViewController.m */; };
-		AF9DECC921558CF100844449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECC721558CF100844449 /* Main.storyboard */; };
 		AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECCA21558CF300844449 /* Assets.xcassets */; };
 		AF9DECCE21558CF300844449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */; };
 		AF9DECD121558CF300844449 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECD021558CF300844449 /* main.m */; };
@@ -42,12 +42,13 @@
 		3D7DE1FAB82888D85A442A9B /* Pods-SunlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyUITests/Pods-SunlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		526986D597984376C7A09CFE /* Pods-Sunly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunly/Pods-Sunly.release.xcconfig"; sourceTree = "<group>"; };
 		9B21F98ACD34D98FBDA47EBA /* Pods-SunlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyUITests/Pods-SunlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF06B1E12155A346006CC80C /* ContactPermissionProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionProtocols.h; sourceTree = "<group>"; };
+		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
+		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
 		AF9DECBE21558CF100844449 /* Sunly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9DECC121558CF100844449 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF9DECC221558CF100844449 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF9DECC421558CF100844449 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF9DECC521558CF100844449 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AF9DECC821558CF100844449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF9DECCA21558CF300844449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9DECCD21558CF300844449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9DECCF21558CF300844449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +107,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF1547C321559AB900347AF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DECC121558CF100844449 /* AppDelegate.h */,
+				AF9DECC221558CF100844449 /* AppDelegate.m */,
+				AF9DECCA21558CF300844449 /* Assets.xcassets */,
+				AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */,
+				AF9DECCF21558CF300844449 /* Info.plist */,
+				AF9DECD021558CF300844449 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF1547C421559AC700347AF7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AF1547C521559ACD00347AF7 /* OnBoarding */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AF1547C521559ACD00347AF7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */,
+				AF1547C621559AD900347AF7 /* ContactPermission */,
+				AF1547C721559AF700347AF7 /* LocationPermission */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		AF1547C621559AD900347AF7 /* ContactPermission */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B1E12155A346006CC80C /* ContactPermissionProtocols.h */,
+				AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */,
+				AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */,
+			);
+			path = ContactPermission;
+			sourceTree = "<group>";
+		};
+		AF1547C721559AF700347AF7 /* LocationPermission */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationPermission;
+			sourceTree = "<group>";
+		};
 		AF9DECB521558CF100844449 = {
 			isa = PBXGroup;
 			children = (
@@ -131,15 +180,8 @@
 		AF9DECC021558CF100844449 /* Sunly */ = {
 			isa = PBXGroup;
 			children = (
-				AF9DECC121558CF100844449 /* AppDelegate.h */,
-				AF9DECC221558CF100844449 /* AppDelegate.m */,
-				AF9DECC421558CF100844449 /* ViewController.h */,
-				AF9DECC521558CF100844449 /* ViewController.m */,
-				AF9DECC721558CF100844449 /* Main.storyboard */,
-				AF9DECCA21558CF300844449 /* Assets.xcassets */,
-				AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */,
-				AF9DECCF21558CF300844449 /* Info.plist */,
-				AF9DECD021558CF300844449 /* main.m */,
+				AF1547C421559AC700347AF7 /* Modules */,
+				AF1547C321559AB900347AF7 /* Supporting Files */,
 			);
 			path = Sunly;
 			sourceTree = "<group>";
@@ -281,7 +323,7 @@
 			files = (
 				AF9DECCE21558CF300844449 /* LaunchScreen.storyboard in Resources */,
 				AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */,
-				AF9DECC921558CF100844449 /* Main.storyboard in Resources */,
+				AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9DECC621558CF100844449 /* ViewController.m in Sources */,
 				AF9DECD121558CF300844449 /* main.m in Sources */,
 				AF9DECC321558CF100844449 /* AppDelegate.m in Sources */,
+				AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,14 +461,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF9DECC721558CF100844449 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF9DECC821558CF100844449 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -557,7 +591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H3Q87NGJC;
-				INFOPLIST_FILE = Sunly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sunly/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,7 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H3Q87NGJC;
-				INFOPLIST_FILE = Sunly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sunly/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
