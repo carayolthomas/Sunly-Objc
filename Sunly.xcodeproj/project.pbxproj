@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		210975CA2DB9DFADEBA43B27 /* Pods_Sunly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF682153FDFBF6A84EC754C8 /* Pods_Sunly.framework */; };
+		30588B83A2B93B0093BF632D /* Pods_SunlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9CF6F0047039A92762CD86 /* Pods_SunlyUITests.framework */; };
+		71A313982406F0DE0E6E8BB6 /* Pods_SunlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C7F5DB89A6D5FBE7658FD8 /* Pods_SunlyTests.framework */; };
+		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
+		AF9DECC621558CF100844449 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC521558CF100844449 /* ViewController.m */; };
+		AF9DECC921558CF100844449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECC721558CF100844449 /* Main.storyboard */; };
+		AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECCA21558CF300844449 /* Assets.xcassets */; };
+		AF9DECCE21558CF300844449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */; };
+		AF9DECD121558CF300844449 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECD021558CF300844449 /* main.m */; };
+		AF9DECDB21558CF300844449 /* SunlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECDA21558CF300844449 /* SunlyTests.m */; };
+		AF9DECE621558CF300844449 /* SunlyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECE521558CF300844449 /* SunlyUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF9DECD721558CF300844449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF9DECB621558CF100844449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF9DECBD21558CF100844449;
+			remoteInfo = Sunly;
+		};
+		AF9DECE221558CF300844449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF9DECB621558CF100844449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF9DECBD21558CF100844449;
+			remoteInfo = Sunly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08C954D2938D6AE62C2733D1 /* Pods-SunlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyTests/Pods-SunlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D7DE1FAB82888D85A442A9B /* Pods-SunlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyUITests/Pods-SunlyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		526986D597984376C7A09CFE /* Pods-Sunly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunly/Pods-Sunly.release.xcconfig"; sourceTree = "<group>"; };
+		9B21F98ACD34D98FBDA47EBA /* Pods-SunlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyUITests/Pods-SunlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF9DECBE21558CF100844449 /* Sunly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9DECC121558CF100844449 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF9DECC221558CF100844449 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF9DECC421558CF100844449 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF9DECC521558CF100844449 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF9DECC821558CF100844449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF9DECCA21558CF300844449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF9DECCD21558CF300844449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF9DECCF21558CF300844449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF9DECD021558CF300844449 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF9DECD621558CF300844449 /* SunlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9DECDA21558CF300844449 /* SunlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunlyTests.m; sourceTree = "<group>"; };
+		AF9DECDC21558CF300844449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF9DECE121558CF300844449 /* SunlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9DECE521558CF300844449 /* SunlyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunlyUITests.m; sourceTree = "<group>"; };
+		AF9DECE721558CF300844449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7508708F311AB8F237F1A55 /* Pods-Sunly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunly/Pods-Sunly.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9CF6F0047039A92762CD86 /* Pods_SunlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB1CF9B86FB9A7723914BAE9 /* Pods-SunlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyTests/Pods-SunlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C7F5DB89A6D5FBE7658FD8 /* Pods_SunlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF682153FDFBF6A84EC754C8 /* Pods_Sunly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF9DECBB21558CF100844449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210975CA2DB9DFADEBA43B27 /* Pods_Sunly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9DECD321558CF300844449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A313982406F0DE0E6E8BB6 /* Pods_SunlyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9DECDE21558CF300844449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30588B83A2B93B0093BF632D /* Pods_SunlyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74A687EB510B3B8F5C984F4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7508708F311AB8F237F1A55 /* Pods-Sunly.debug.xcconfig */,
+				526986D597984376C7A09CFE /* Pods-Sunly.release.xcconfig */,
+				DB1CF9B86FB9A7723914BAE9 /* Pods-SunlyTests.debug.xcconfig */,
+				08C954D2938D6AE62C2733D1 /* Pods-SunlyTests.release.xcconfig */,
+				9B21F98ACD34D98FBDA47EBA /* Pods-SunlyUITests.debug.xcconfig */,
+				3D7DE1FAB82888D85A442A9B /* Pods-SunlyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF9DECB521558CF100844449 = {
+			isa = PBXGroup;
+			children = (
+				AF9DECC021558CF100844449 /* Sunly */,
+				AF9DECD921558CF300844449 /* SunlyTests */,
+				AF9DECE421558CF300844449 /* SunlyUITests */,
+				AF9DECBF21558CF100844449 /* Products */,
+				74A687EB510B3B8F5C984F4F /* Pods */,
+				CC3E1475009FE70CFB5E79C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF9DECBF21558CF100844449 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DECBE21558CF100844449 /* Sunly.app */,
+				AF9DECD621558CF300844449 /* SunlyTests.xctest */,
+				AF9DECE121558CF300844449 /* SunlyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF9DECC021558CF100844449 /* Sunly */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DECC121558CF100844449 /* AppDelegate.h */,
+				AF9DECC221558CF100844449 /* AppDelegate.m */,
+				AF9DECC421558CF100844449 /* ViewController.h */,
+				AF9DECC521558CF100844449 /* ViewController.m */,
+				AF9DECC721558CF100844449 /* Main.storyboard */,
+				AF9DECCA21558CF300844449 /* Assets.xcassets */,
+				AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */,
+				AF9DECCF21558CF300844449 /* Info.plist */,
+				AF9DECD021558CF300844449 /* main.m */,
+			);
+			path = Sunly;
+			sourceTree = "<group>";
+		};
+		AF9DECD921558CF300844449 /* SunlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DECDA21558CF300844449 /* SunlyTests.m */,
+				AF9DECDC21558CF300844449 /* Info.plist */,
+			);
+			path = SunlyTests;
+			sourceTree = "<group>";
+		};
+		AF9DECE421558CF300844449 /* SunlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DECE521558CF300844449 /* SunlyUITests.m */,
+				AF9DECE721558CF300844449 /* Info.plist */,
+			);
+			path = SunlyUITests;
+			sourceTree = "<group>";
+		};
+		CC3E1475009FE70CFB5E79C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF682153FDFBF6A84EC754C8 /* Pods_Sunly.framework */,
+				E6C7F5DB89A6D5FBE7658FD8 /* Pods_SunlyTests.framework */,
+				DA9CF6F0047039A92762CD86 /* Pods_SunlyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF9DECBD21558CF100844449 /* Sunly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9DECEA21558CF300844449 /* Build configuration list for PBXNativeTarget "Sunly" */;
+			buildPhases = (
+				3A4DC1D166528D557CB16E91 /* [CP] Check Pods Manifest.lock */,
+				AF9DECBA21558CF100844449 /* Sources */,
+				AF9DECBB21558CF100844449 /* Frameworks */,
+				AF9DECBC21558CF100844449 /* Resources */,
+				A3385E66D7831AC5F73B8F5D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sunly;
+			productName = Sunly;
+			productReference = AF9DECBE21558CF100844449 /* Sunly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF9DECD521558CF300844449 /* SunlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9DECED21558CF300844449 /* Build configuration list for PBXNativeTarget "SunlyTests" */;
+			buildPhases = (
+				D01A56F1D49E79B616BFE3E9 /* [CP] Check Pods Manifest.lock */,
+				AF9DECD221558CF300844449 /* Sources */,
+				AF9DECD321558CF300844449 /* Frameworks */,
+				AF9DECD421558CF300844449 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF9DECD821558CF300844449 /* PBXTargetDependency */,
+			);
+			name = SunlyTests;
+			productName = SunlyTests;
+			productReference = AF9DECD621558CF300844449 /* SunlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF9DECE021558CF300844449 /* SunlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9DECF021558CF300844449 /* Build configuration list for PBXNativeTarget "SunlyUITests" */;
+			buildPhases = (
+				A1B93D37D6A23199F0E75E4B /* [CP] Check Pods Manifest.lock */,
+				AF9DECDD21558CF300844449 /* Sources */,
+				AF9DECDE21558CF300844449 /* Frameworks */,
+				AF9DECDF21558CF300844449 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF9DECE321558CF300844449 /* PBXTargetDependency */,
+			);
+			name = SunlyUITests;
+			productName = SunlyUITests;
+			productReference = AF9DECE121558CF300844449 /* SunlyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF9DECB621558CF100844449 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Thomas Carayol";
+				TargetAttributes = {
+					AF9DECBD21558CF100844449 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					AF9DECD521558CF300844449 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = AF9DECBD21558CF100844449;
+					};
+					AF9DECE021558CF300844449 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = AF9DECBD21558CF100844449;
+					};
+				};
+			};
+			buildConfigurationList = AF9DECB921558CF100844449 /* Build configuration list for PBXProject "Sunly" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF9DECB521558CF100844449;
+			productRefGroup = AF9DECBF21558CF100844449 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF9DECBD21558CF100844449 /* Sunly */,
+				AF9DECD521558CF300844449 /* SunlyTests */,
+				AF9DECE021558CF300844449 /* SunlyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF9DECBC21558CF100844449 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9DECCE21558CF300844449 /* LaunchScreen.storyboard in Resources */,
+				AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */,
+				AF9DECC921558CF100844449 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9DECD421558CF300844449 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9DECDF21558CF300844449 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A4DC1D166528D557CB16E91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sunly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B93D37D6A23199F0E75E4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SunlyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3385E66D7831AC5F73B8F5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sunly/Pods-Sunly-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunly/Pods-Sunly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D01A56F1D49E79B616BFE3E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SunlyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF9DECBA21558CF100844449 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9DECC621558CF100844449 /* ViewController.m in Sources */,
+				AF9DECD121558CF300844449 /* main.m in Sources */,
+				AF9DECC321558CF100844449 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9DECD221558CF300844449 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9DECDB21558CF300844449 /* SunlyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9DECDD21558CF300844449 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9DECE621558CF300844449 /* SunlyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF9DECD821558CF300844449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF9DECBD21558CF100844449 /* Sunly */;
+			targetProxy = AF9DECD721558CF300844449 /* PBXContainerItemProxy */;
+		};
+		AF9DECE321558CF300844449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF9DECBD21558CF100844449 /* Sunly */;
+			targetProxy = AF9DECE221558CF300844449 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF9DECC721558CF100844449 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF9DECC821558CF100844449 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF9DECCD21558CF300844449 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF9DECE821558CF300844449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF9DECE921558CF300844449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF9DECEB21558CF300844449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7508708F311AB8F237F1A55 /* Pods-Sunly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3Q87NGJC;
+				INFOPLIST_FILE = Sunly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.Sunly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF9DECEC21558CF300844449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 526986D597984376C7A09CFE /* Pods-Sunly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3Q87NGJC;
+				INFOPLIST_FILE = Sunly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.Sunly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF9DECEE21558CF300844449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB1CF9B86FB9A7723914BAE9 /* Pods-SunlyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3Q87NGJC;
+				INFOPLIST_FILE = SunlyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.SunlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunly.app/Sunly";
+			};
+			name = Debug;
+		};
+		AF9DECEF21558CF300844449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08C954D2938D6AE62C2733D1 /* Pods-SunlyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3Q87NGJC;
+				INFOPLIST_FILE = SunlyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.SunlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunly.app/Sunly";
+			};
+			name = Release;
+		};
+		AF9DECF121558CF300844449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B21F98ACD34D98FBDA47EBA /* Pods-SunlyUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3Q87NGJC;
+				INFOPLIST_FILE = SunlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.SunlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sunly;
+			};
+			name = Debug;
+		};
+		AF9DECF221558CF300844449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D7DE1FAB82888D85A442A9B /* Pods-SunlyUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3Q87NGJC;
+				INFOPLIST_FILE = SunlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.SunlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sunly;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF9DECB921558CF100844449 /* Build configuration list for PBXProject "Sunly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9DECE821558CF300844449 /* Debug */,
+				AF9DECE921558CF300844449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF9DECEA21558CF300844449 /* Build configuration list for PBXNativeTarget "Sunly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9DECEB21558CF300844449 /* Debug */,
+				AF9DECEC21558CF300844449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF9DECED21558CF300844449 /* Build configuration list for PBXNativeTarget "SunlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9DECEE21558CF300844449 /* Debug */,
+				AF9DECEF21558CF300844449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF9DECF021558CF300844449 /* Build configuration list for PBXNativeTarget "SunlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9DECF121558CF300844449 /* Debug */,
+				AF9DECF221558CF300844449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF9DECB621558CF100844449 /* Project object */;
+}
