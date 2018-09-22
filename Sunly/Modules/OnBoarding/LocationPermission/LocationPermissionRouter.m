@@ -11,6 +11,7 @@
 #import "LocationPermissionPresenter.h"
 #import "LocationPermissionInteractor.h"
 #import "Constants.h"
+#import "DashboardRouter.h"
 
 
 @implementation LocationPermissionRouter
@@ -26,7 +27,8 @@
 }
 
 - (void)showNextStepFrom:(nonnull id<LocationPermissionPresenterToView>)view {
-    [[(UIViewController *)view navigationController] setViewControllers:@[[UIViewController new]] animated:YES];
+    UIViewController *nextStep = [DashboardRouter createModule];
+    [[(UIViewController *)view navigationController] setViewControllers:@[nextStep] animated:YES];
 }
 
 @end

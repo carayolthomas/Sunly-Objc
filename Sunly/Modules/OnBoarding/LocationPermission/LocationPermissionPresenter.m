@@ -64,13 +64,13 @@
 - (void)viewDidAppear {
     __weak LocationPermissionPresenter *weakSelf = self;
     [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification object:nil queue:nil usingBlock:^(NSNotification * __nonnull note) {
-        [weakSelf handleLocationAuthorizationStatus:[LocationHelper currentStatus] with:nil];
+        [weakSelf handleLocationAuthorizationStatus:[LocationHelper currentStatus] with:nil shouldTryAgain:YES];
     }];
 }
 
-- (void)handleLocationAuthorizationStatus:(CLAuthorizationStatus)status with:(CLLocation *)location {
+- (void)handleLocationAuthorizationStatus:(CLAuthorizationStatus)status with:(CLLocation *)location shouldTryAgain:(BOOL)again {
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [self locationAuthorizedBehavior:location];
+        [self locationAuthorizedBehavior:location shouldTryAgain:again];
     } else if (status == kCLAuthorizationStatusRestricted) {
         [self locationRestrictedBehavior];
     } else if (status == kCLAuthorizationStatusDenied) {
@@ -78,17 +78,16 @@
     }
 }
 
-- (void)locationAuthorizedBehavior:(CLLocation *)location {
+- (void)locationAuthorizedBehavior:(CLLocation *)location shouldTryAgain:(BOOL)again {
     if (location) {
         [[self interactor] storeUserCoordinate:[NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            [[self router] showNextStepFrom:self.view];
-        });
-    } else {
+        [self handleNavigation];
+    } else if (again) {
         [[self view] disableNextButton];
         [[self view] configureSearching];
         [self requestLocation];
+    } else {
+        [self handleNavigation];
     }
 }
 
@@ -102,6 +101,13 @@
     [[self view] showSettingsAlertWith:NSLocalizedStringFromTable(@"LocationPermissionDeniedTitle", @"OnBoarding", @"") and:NSLocalizedStringFromTable(@"LocationPermissionDeniedMessage", @"OnBoarding", @"")];
 }
 
+- (void)handleNavigation {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[self router] showNextStepFrom:self.view];
+    });
+}
+
 - (void)dealloc {
     NSLog(@"dealloc");
 }
@@ -112,7 +118,7 @@
     __weak LocationPermissionPresenter *weakSelf = self;
     self.helper = [[LocationHelper alloc] init];
     [self.helper askLocationPermission:^(CLLocation * _Nullable location, CLAuthorizationStatus status) {
-        [weakSelf handleLocationAuthorizationStatus:status with:location];
+        [weakSelf handleLocationAuthorizationStatus:status with:location shouldTryAgain:NO];
     }];
 }
 

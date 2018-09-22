@@ -11,7 +11,9 @@
 #pragma mark - OnBoarding
 
 FOUNDATION_EXPORT NSString *const OnBoardingStoryboardName;
+FOUNDATION_EXPORT NSString *const DashboardStoryboardName;
 FOUNDATION_EXPORT NSString *const ContactPermissionViewControllerIdentifier;
 FOUNDATION_EXPORT NSString *const LocationPermissionViewControllerIdentifier;
 FOUNDATION_EXPORT NSString *const UserGivenNameKey;
 FOUNDATION_EXPORT NSString *const UserCoordinateKey;
+FOUNDATION_EXPORT NSString *const DashboardViewControllerIdentifier;

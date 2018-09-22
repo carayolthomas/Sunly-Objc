@@ -7,6 +7,7 @@
 //
 
 #import "OnBoardingNavigationController.h"
+#import "UIColor+Additions.h"
 
 @interface OnBoardingNavigationController () <UINavigationControllerDelegate>
 
@@ -18,6 +19,7 @@
     [super viewDidLoad];
     [self setNavigationBarHidden:YES];
     [self setDelegate:self];
+    [[self navigationBar] setBarTintColor:[UIColor skyBlueColor]];
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -27,7 +29,7 @@
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 @end

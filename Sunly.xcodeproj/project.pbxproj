@@ -45,6 +45,12 @@
 		AF06B28D2156A1E4006CC80C /* LocationPermissionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2852156A1E3006CC80C /* LocationPermissionPresenter.m */; };
 		AF06B2902156A510006CC80C /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B28F2156A510006CC80C /* LocationHelper.m */; };
 		AF06B2922156C6C1006CC80C /* searching-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2912156C6C1006CC80C /* searching-animation.json */; };
+		AF06B2952156D57E006CC80C /* Dashboard.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2942156D57E006CC80C /* Dashboard.strings */; };
+		AF06B2972156D58F006CC80C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2962156D58F006CC80C /* Dashboard.storyboard */; };
+		AF06B2A12156D6CA006CC80C /* DashboardInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2982156D6CA006CC80C /* DashboardInteractor.m */; };
+		AF06B2A22156D6CA006CC80C /* DashboardRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2992156D6CA006CC80C /* DashboardRouter.m */; };
+		AF06B2A32156D6CA006CC80C /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B29F2156D6CA006CC80C /* DashboardViewController.m */; };
+		AF06B2A42156D6CA006CC80C /* DashboardPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
@@ -128,6 +134,17 @@
 		AF06B28E2156A510006CC80C /* LocationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
 		AF06B28F2156A510006CC80C /* LocationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
 		AF06B2912156C6C1006CC80C /* searching-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "searching-animation.json"; sourceTree = "<group>"; };
+		AF06B2942156D57E006CC80C /* Dashboard.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Dashboard.strings; sourceTree = "<group>"; };
+		AF06B2962156D58F006CC80C /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		AF06B2982156D6CA006CC80C /* DashboardInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardInteractor.m; sourceTree = "<group>"; };
+		AF06B2992156D6CA006CC80C /* DashboardRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardRouter.m; sourceTree = "<group>"; };
+		AF06B29A2156D6CA006CC80C /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		AF06B29B2156D6CA006CC80C /* DashboardPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardPresenter.h; sourceTree = "<group>"; };
+		AF06B29C2156D6CA006CC80C /* DashboardProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardProtocols.h; sourceTree = "<group>"; };
+		AF06B29D2156D6CA006CC80C /* DashboardInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardInteractor.h; sourceTree = "<group>"; };
+		AF06B29E2156D6CA006CC80C /* DashboardRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardRouter.h; sourceTree = "<group>"; };
+		AF06B29F2156D6CA006CC80C /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardPresenter.m; sourceTree = "<group>"; };
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
 		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
@@ -262,6 +279,17 @@
 		AF06B2932156CCDE006CC80C /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				AF06B2942156D57E006CC80C /* Dashboard.strings */,
+				AF06B2962156D58F006CC80C /* Dashboard.storyboard */,
+				AF06B29C2156D6CA006CC80C /* DashboardProtocols.h */,
+				AF06B29A2156D6CA006CC80C /* DashboardViewController.h */,
+				AF06B29F2156D6CA006CC80C /* DashboardViewController.m */,
+				AF06B29D2156D6CA006CC80C /* DashboardInteractor.h */,
+				AF06B2982156D6CA006CC80C /* DashboardInteractor.m */,
+				AF06B29B2156D6CA006CC80C /* DashboardPresenter.h */,
+				AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */,
+				AF06B29E2156D6CA006CC80C /* DashboardRouter.h */,
+				AF06B2992156D6CA006CC80C /* DashboardRouter.m */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -505,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF06B21521564D4C006CC80C /* Montserrat-BlackItalic.ttf in Resources */,
+				AF06B2952156D57E006CC80C /* Dashboard.strings in Resources */,
 				AF06B21F21564D4C006CC80C /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				AF06B21721564D4C006CC80C /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				AF06B21621564D4C006CC80C /* Montserrat-Black.ttf in Resources */,
@@ -524,6 +553,7 @@
 				AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */,
 				AF06B21C21564D4C006CC80C /* Montserrat-ExtraLight.ttf in Resources */,
 				AF06B21E21564D4C006CC80C /* Montserrat-Italic.ttf in Resources */,
+				AF06B2972156D58F006CC80C /* Dashboard.storyboard in Resources */,
 				AF06B22021564D4C006CC80C /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				AF06B21221564D4C006CC80C /* Montserrat-MediumItalic.ttf in Resources */,
 				AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */,
@@ -626,14 +656,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF06B2A12156D6CA006CC80C /* DashboardInteractor.m in Sources */,
 				AF06B1E9215639E9006CC80C /* ContactPermissionInteractor.m in Sources */,
 				AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */,
 				AF06B23121566973006CC80C /* ContactHelper.m in Sources */,
 				AF06B1EF21563A06006CC80C /* ContactPermissionRouter.m in Sources */,
+				AF06B2A42156D6CA006CC80C /* DashboardPresenter.m in Sources */,
 				AF06B2902156A510006CC80C /* LocationHelper.m in Sources */,
 				AF06B28A2156A1E4006CC80C /* LocationPermissionRouter.m in Sources */,
 				AF06B1F7215642F8006CC80C /* UIColor+Additions.m in Sources */,
 				AF06B28C2156A1E4006CC80C /* LocationPermissionInteractor.m in Sources */,
+				AF06B2A22156D6CA006CC80C /* DashboardRouter.m in Sources */,
+				AF06B2A32156D6CA006CC80C /* DashboardViewController.m in Sources */,
 				AF06B1E6215637C3006CC80C /* OnBoardingNavigationController.m in Sources */,
 				AF06B1F321564076006CC80C /* Constants.m in Sources */,
 				AF06B1EC215639F9006CC80C /* ContactPermissionPresenter.m in Sources */,
