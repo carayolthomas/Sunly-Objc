@@ -10,6 +10,36 @@
 		210975CA2DB9DFADEBA43B27 /* Pods_Sunly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF682153FDFBF6A84EC754C8 /* Pods_Sunly.framework */; };
 		30588B83A2B93B0093BF632D /* Pods_SunlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9CF6F0047039A92762CD86 /* Pods_SunlyUITests.framework */; };
 		71A313982406F0DE0E6E8BB6 /* Pods_SunlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C7F5DB89A6D5FBE7658FD8 /* Pods_SunlyTests.framework */; };
+		AF06B1E6215637C3006CC80C /* OnBoardingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B1E5215637C3006CC80C /* OnBoardingNavigationController.m */; };
+		AF06B1E9215639E9006CC80C /* ContactPermissionInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B1E8215639E9006CC80C /* ContactPermissionInteractor.m */; };
+		AF06B1EC215639F9006CC80C /* ContactPermissionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B1EB215639F9006CC80C /* ContactPermissionPresenter.m */; };
+		AF06B1EF21563A06006CC80C /* ContactPermissionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B1EE21563A06006CC80C /* ContactPermissionRouter.m */; };
+		AF06B1F321564076006CC80C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B1F221564076006CC80C /* Constants.m */; };
+		AF06B1F7215642F8006CC80C /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B1F6215642F8006CC80C /* UIColor+Additions.m */; };
+		AF06B1FA21564A77006CC80C /* OnBoarding.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF06B1FC21564A77006CC80C /* OnBoarding.strings */; };
+		AF06B21121564D4C006CC80C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B1FE21564D4B006CC80C /* Montserrat-Bold.ttf */; };
+		AF06B21221564D4C006CC80C /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B1FF21564D4B006CC80C /* Montserrat-MediumItalic.ttf */; };
+		AF06B21321564D4C006CC80C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20021564D4B006CC80C /* Montserrat-Light.ttf */; };
+		AF06B21421564D4C006CC80C /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20121564D4B006CC80C /* Montserrat-BoldItalic.ttf */; };
+		AF06B21521564D4C006CC80C /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20221564D4B006CC80C /* Montserrat-BlackItalic.ttf */; };
+		AF06B21621564D4C006CC80C /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20321564D4B006CC80C /* Montserrat-Black.ttf */; };
+		AF06B21721564D4C006CC80C /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20421564D4B006CC80C /* Montserrat-SemiBoldItalic.ttf */; };
+		AF06B21821564D4C006CC80C /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20521564D4B006CC80C /* Montserrat-LightItalic.ttf */; };
+		AF06B21A21564D4C006CC80C /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20721564D4B006CC80C /* Montserrat-Thin.ttf */; };
+		AF06B21B21564D4C006CC80C /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20821564D4C006CC80C /* Montserrat-ExtraBold.ttf */; };
+		AF06B21C21564D4C006CC80C /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20921564D4C006CC80C /* Montserrat-ExtraLight.ttf */; };
+		AF06B21D21564D4C006CC80C /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20A21564D4C006CC80C /* Montserrat-Medium.ttf */; };
+		AF06B21E21564D4C006CC80C /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20B21564D4C006CC80C /* Montserrat-Italic.ttf */; };
+		AF06B21F21564D4C006CC80C /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20C21564D4C006CC80C /* Montserrat-ExtraBoldItalic.ttf */; };
+		AF06B22021564D4C006CC80C /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20D21564D4C006CC80C /* Montserrat-ExtraLightItalic.ttf */; };
+		AF06B22121564D4C006CC80C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20E21564D4C006CC80C /* Montserrat-Regular.ttf */; };
+		AF06B22221564D4C006CC80C /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20F21564D4C006CC80C /* Montserrat-SemiBold.ttf */; };
+		AF06B22321564D4C006CC80C /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B21021564D4C006CC80C /* Montserrat-ThinItalic.ttf */; };
+		AF06B22621564F48006CC80C /* UIButton+Swag.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22521564F48006CC80C /* UIButton+Swag.m */; };
+		AF06B22921565A07006CC80C /* SunlyContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22821565A07006CC80C /* SunlyContact.m */; };
+		AF06B22C21566251006CC80C /* CNContact+Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22B21566251006CC80C /* CNContact+Filter.m */; };
+		AF06B23121566973006CC80C /* ContactHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B23021566973006CC80C /* ContactHelper.m */; };
+		AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF06B27321566B3D006CC80C /* Sunly.xcdatamodeld */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
@@ -43,6 +73,46 @@
 		526986D597984376C7A09CFE /* Pods-Sunly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunly/Pods-Sunly.release.xcconfig"; sourceTree = "<group>"; };
 		9B21F98ACD34D98FBDA47EBA /* Pods-SunlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunlyUITests/Pods-SunlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF06B1E12155A346006CC80C /* ContactPermissionProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionProtocols.h; sourceTree = "<group>"; };
+		AF06B1E4215637C3006CC80C /* OnBoardingNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnBoardingNavigationController.h; sourceTree = "<group>"; };
+		AF06B1E5215637C3006CC80C /* OnBoardingNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnBoardingNavigationController.m; sourceTree = "<group>"; };
+		AF06B1E7215639E9006CC80C /* ContactPermissionInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionInteractor.h; sourceTree = "<group>"; };
+		AF06B1E8215639E9006CC80C /* ContactPermissionInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionInteractor.m; sourceTree = "<group>"; };
+		AF06B1EA215639F9006CC80C /* ContactPermissionPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionPresenter.h; sourceTree = "<group>"; };
+		AF06B1EB215639F9006CC80C /* ContactPermissionPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionPresenter.m; sourceTree = "<group>"; };
+		AF06B1ED21563A06006CC80C /* ContactPermissionRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionRouter.h; sourceTree = "<group>"; };
+		AF06B1EE21563A06006CC80C /* ContactPermissionRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionRouter.m; sourceTree = "<group>"; };
+		AF06B1F121564076006CC80C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AF06B1F221564076006CC80C /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		AF06B1F5215642F8006CC80C /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		AF06B1F6215642F8006CC80C /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		AF06B1FB21564A77006CC80C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnBoarding.strings; sourceTree = "<group>"; };
+		AF06B1FE21564D4B006CC80C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		AF06B1FF21564D4B006CC80C /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20021564D4B006CC80C /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		AF06B20121564D4B006CC80C /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20221564D4B006CC80C /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20321564D4B006CC80C /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		AF06B20421564D4B006CC80C /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20521564D4B006CC80C /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20721564D4B006CC80C /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		AF06B20821564D4C006CC80C /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AF06B20921564D4C006CC80C /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		AF06B20A21564D4C006CC80C /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		AF06B20B21564D4C006CC80C /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		AF06B20C21564D4C006CC80C /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20D21564D4C006CC80C /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		AF06B20E21564D4C006CC80C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		AF06B20F21564D4C006CC80C /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		AF06B21021564D4C006CC80C /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AF06B22421564F07006CC80C /* UIButton+Swag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Swag.h"; sourceTree = "<group>"; };
+		AF06B22521564F48006CC80C /* UIButton+Swag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Swag.m"; sourceTree = "<group>"; };
+		AF06B22721565A07006CC80C /* SunlyContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunlyContact.h; sourceTree = "<group>"; };
+		AF06B22821565A07006CC80C /* SunlyContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunlyContact.m; sourceTree = "<group>"; };
+		AF06B22A21566228006CC80C /* CNContact+Filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CNContact+Filter.h"; sourceTree = "<group>"; };
+		AF06B22B21566251006CC80C /* CNContact+Filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CNContact+Filter.m"; sourceTree = "<group>"; };
+		AF06B22F21566973006CC80C /* ContactHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactHelper.h; sourceTree = "<group>"; };
+		AF06B23021566973006CC80C /* ContactHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactHelper.m; sourceTree = "<group>"; };
+		AF06B27421566B3D006CC80C /* Sunly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sunly.xcdatamodel; sourceTree = "<group>"; };
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
 		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
@@ -107,6 +177,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF06B1E32156379E006CC80C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B1E4215637C3006CC80C /* OnBoardingNavigationController.h */,
+				AF06B1E5215637C3006CC80C /* OnBoardingNavigationController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AF06B1F021564051006CC80C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B1F121564076006CC80C /* Constants.h */,
+				AF06B1F221564076006CC80C /* Constants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF06B1F4215642EF006CC80C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B1F5215642F8006CC80C /* UIColor+Additions.h */,
+				AF06B1F6215642F8006CC80C /* UIColor+Additions.m */,
+				AF06B22421564F07006CC80C /* UIButton+Swag.h */,
+				AF06B22521564F48006CC80C /* UIButton+Swag.m */,
+				AF06B22A21566228006CC80C /* CNContact+Filter.h */,
+				AF06B22B21566251006CC80C /* CNContact+Filter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF06B1FD21564D40006CC80C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B20321564D4B006CC80C /* Montserrat-Black.ttf */,
+				AF06B20221564D4B006CC80C /* Montserrat-BlackItalic.ttf */,
+				AF06B1FE21564D4B006CC80C /* Montserrat-Bold.ttf */,
+				AF06B20121564D4B006CC80C /* Montserrat-BoldItalic.ttf */,
+				AF06B20821564D4C006CC80C /* Montserrat-ExtraBold.ttf */,
+				AF06B20C21564D4C006CC80C /* Montserrat-ExtraBoldItalic.ttf */,
+				AF06B20921564D4C006CC80C /* Montserrat-ExtraLight.ttf */,
+				AF06B20D21564D4C006CC80C /* Montserrat-ExtraLightItalic.ttf */,
+				AF06B20B21564D4C006CC80C /* Montserrat-Italic.ttf */,
+				AF06B20021564D4B006CC80C /* Montserrat-Light.ttf */,
+				AF06B20521564D4B006CC80C /* Montserrat-LightItalic.ttf */,
+				AF06B20A21564D4C006CC80C /* Montserrat-Medium.ttf */,
+				AF06B1FF21564D4B006CC80C /* Montserrat-MediumItalic.ttf */,
+				AF06B20E21564D4C006CC80C /* Montserrat-Regular.ttf */,
+				AF06B20F21564D4C006CC80C /* Montserrat-SemiBold.ttf */,
+				AF06B20421564D4B006CC80C /* Montserrat-SemiBoldItalic.ttf */,
+				AF06B20721564D4B006CC80C /* Montserrat-Thin.ttf */,
+				AF06B21021564D4C006CC80C /* Montserrat-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF06B22E215668E1006CC80C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B22F21566973006CC80C /* ContactHelper.h */,
+				AF06B23021566973006CC80C /* ContactHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AF1547C321559AB900347AF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +251,7 @@
 				AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */,
 				AF9DECCF21558CF300844449 /* Info.plist */,
 				AF9DECD021558CF300844449 /* main.m */,
+				AF06B27321566B3D006CC80C /* Sunly.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,7 +267,10 @@
 		AF1547C521559ACD00347AF7 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				AF06B1FC21564A77006CC80C /* OnBoarding.strings */,
 				AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */,
+				AF06B22721565A07006CC80C /* SunlyContact.h */,
+				AF06B22821565A07006CC80C /* SunlyContact.m */,
 				AF1547C621559AD900347AF7 /* ContactPermission */,
 				AF1547C721559AF700347AF7 /* LocationPermission */,
 			);
@@ -144,6 +283,12 @@
 				AF06B1E12155A346006CC80C /* ContactPermissionProtocols.h */,
 				AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */,
 				AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */,
+				AF06B1E7215639E9006CC80C /* ContactPermissionInteractor.h */,
+				AF06B1E8215639E9006CC80C /* ContactPermissionInteractor.m */,
+				AF06B1EA215639F9006CC80C /* ContactPermissionPresenter.h */,
+				AF06B1EB215639F9006CC80C /* ContactPermissionPresenter.m */,
+				AF06B1ED21563A06006CC80C /* ContactPermissionRouter.h */,
+				AF06B1EE21563A06006CC80C /* ContactPermissionRouter.m */,
 			);
 			path = ContactPermission;
 			sourceTree = "<group>";
@@ -180,6 +325,11 @@
 		AF9DECC021558CF100844449 /* Sunly */ = {
 			isa = PBXGroup;
 			children = (
+				AF06B22E215668E1006CC80C /* Helpers */,
+				AF06B1FD21564D40006CC80C /* Fonts */,
+				AF06B1F4215642EF006CC80C /* Extensions */,
+				AF06B1F021564051006CC80C /* Constants */,
+				AF06B1E32156379E006CC80C /* Navigation */,
 				AF1547C421559AC700347AF7 /* Modules */,
 				AF1547C321559AB900347AF7 /* Supporting Files */,
 			);
@@ -321,8 +471,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF06B21521564D4C006CC80C /* Montserrat-BlackItalic.ttf in Resources */,
+				AF06B21F21564D4C006CC80C /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				AF06B21721564D4C006CC80C /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				AF06B21621564D4C006CC80C /* Montserrat-Black.ttf in Resources */,
+				AF06B21421564D4C006CC80C /* Montserrat-BoldItalic.ttf in Resources */,
+				AF06B21D21564D4C006CC80C /* Montserrat-Medium.ttf in Resources */,
+				AF06B21321564D4C006CC80C /* Montserrat-Light.ttf in Resources */,
+				AF06B21121564D4C006CC80C /* Montserrat-Bold.ttf in Resources */,
+				AF06B21A21564D4C006CC80C /* Montserrat-Thin.ttf in Resources */,
+				AF06B22121564D4C006CC80C /* Montserrat-Regular.ttf in Resources */,
 				AF9DECCE21558CF300844449 /* LaunchScreen.storyboard in Resources */,
+				AF06B1FA21564A77006CC80C /* OnBoarding.strings in Resources */,
+				AF06B22221564D4C006CC80C /* Montserrat-SemiBold.ttf in Resources */,
+				AF06B21B21564D4C006CC80C /* Montserrat-ExtraBold.ttf in Resources */,
+				AF06B22321564D4C006CC80C /* Montserrat-ThinItalic.ttf in Resources */,
+				AF06B21821564D4C006CC80C /* Montserrat-LightItalic.ttf in Resources */,
 				AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */,
+				AF06B21C21564D4C006CC80C /* Montserrat-ExtraLight.ttf in Resources */,
+				AF06B21E21564D4C006CC80C /* Montserrat-Italic.ttf in Resources */,
+				AF06B22021564D4C006CC80C /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				AF06B21221564D4C006CC80C /* Montserrat-MediumItalic.ttf in Resources */,
 				AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,9 +592,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF06B1E9215639E9006CC80C /* ContactPermissionInteractor.m in Sources */,
+				AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */,
+				AF06B23121566973006CC80C /* ContactHelper.m in Sources */,
+				AF06B1EF21563A06006CC80C /* ContactPermissionRouter.m in Sources */,
+				AF06B1F7215642F8006CC80C /* UIColor+Additions.m in Sources */,
+				AF06B1E6215637C3006CC80C /* OnBoardingNavigationController.m in Sources */,
+				AF06B1F321564076006CC80C /* Constants.m in Sources */,
+				AF06B1EC215639F9006CC80C /* ContactPermissionPresenter.m in Sources */,
 				AF9DECD121558CF300844449 /* main.m in Sources */,
+				AF06B22C21566251006CC80C /* CNContact+Filter.m in Sources */,
 				AF9DECC321558CF100844449 /* AppDelegate.m in Sources */,
+				AF06B22921565A07006CC80C /* SunlyContact.m in Sources */,
 				AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */,
+				AF06B22621564F48006CC80C /* UIButton+Swag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +641,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AF06B1FC21564A77006CC80C /* OnBoarding.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF06B1FB21564A77006CC80C /* en */,
+			);
+			name = OnBoarding.strings;
+			sourceTree = "<group>";
+		};
 		AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -740,6 +928,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF06B27321566B3D006CC80C /* Sunly.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF06B27421566B3D006CC80C /* Sunly.xcdatamodel */,
+			);
+			currentVersion = AF06B27421566B3D006CC80C /* Sunly.xcdatamodel */;
+			path = Sunly.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AF9DECB621558CF100844449 /* Project object */;
 }

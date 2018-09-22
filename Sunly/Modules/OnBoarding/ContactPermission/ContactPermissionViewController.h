@@ -11,7 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ContactPermissionViewController : UIViewController
+@interface ContactPermissionViewController : UIViewController <ContactPermissionPresenterToView>
+
+@property (nonatomic, nullable) id<ContactPermissionViewToPresenter> presenter;
 
 @end
 

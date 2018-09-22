@@ -7,8 +7,14 @@
 //
 
 #import "ContactPermissionViewController.h"
+#import "UIButton+Swag.h"
 
-@interface ContactPermissionViewController () <ContactPermissionPresenterToView>
+@interface ContactPermissionViewController ()
+
+@property (strong, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+@property (strong, nonatomic) IBOutlet UIButton *nextStepButton;
 
 @end
 
@@ -16,17 +22,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[self presenter] viewDidLoad];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)nextStepButtonAction:(id)sender {
+    [[self presenter] nextButtonTapped];
 }
-*/
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - ContactPermissionPresenterToView
+
+- (void)configureNextButton:(nonnull NSString *)title {
+    [[self nextStepButton] nextStepWithTitle:title];
+}
+
+- (void)showContactImageView:(nonnull UIImage *)image {
+    [[self mainImageView] setImage:image];
+}
+
+- (void)showContactMessage:(nonnull NSString *)message {
+    [[self infoLabel] setText:message];
+}
+
+- (void)showWelcomeMessage:(nonnull NSString *)message {
+    [[self welcomeLabel] setText:message];
+}
+
+- (void)configureBackgroundColor:(nonnull UIColor *)color {
+    [[self view] setBackgroundColor:color];
+}
 
 @end

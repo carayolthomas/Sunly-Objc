@@ -9,11 +9,19 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Contact Permission View Controller-->
         <scene sceneID="WgO-mY-Tfo">
             <objects>
-                <viewController id="zvK-fI-zh5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactPermissionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zvK-fI-zh5" customClass="ContactPermissionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1uM-gL-cDv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,9 +33,9 @@
                                     <constraint firstAttribute="width" constant="100" id="mpP-D3-lDz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-YJ-vTR">
-                                <rect key="frame" x="24" y="387.5" width="327" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-YJ-vTR">
+                                <rect key="frame" x="24" y="387.5" width="327" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,22 +45,40 @@
                                     <constraint firstAttribute="height" constant="50" id="0sY-Xf-1bc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <connections>
+                                    <action selector="nextStepButtonAction:" destination="zvK-fI-zh5" eventType="touchUpInside" id="kfE-fk-UAJ"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-l7-m8l">
+                                <rect key="frame" x="24" y="68" width="327" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="5oc-Dz-SHq" secondAttribute="trailing" constant="24" id="1dw-Lk-wuz"/>
+                            <constraint firstItem="Xp1-l7-m8l" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" constant="24" id="4rS-Nn-cs4"/>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="F90-YJ-vTR" secondAttribute="trailing" constant="24" id="HmX-5v-0mF"/>
                             <constraint firstItem="LgU-HG-02N" firstAttribute="centerX" secondItem="6d6-7C-5Bn" secondAttribute="centerX" id="Jdb-dR-oHc"/>
                             <constraint firstItem="5oc-Dz-SHq" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" constant="24" id="VH1-LU-Ssv"/>
+                            <constraint firstItem="Xp1-l7-m8l" firstAttribute="top" secondItem="6d6-7C-5Bn" secondAttribute="top" constant="48" id="WEp-0L-oj4"/>
                             <constraint firstItem="LgU-HG-02N" firstAttribute="centerY" secondItem="6d6-7C-5Bn" secondAttribute="centerY" constant="-40" id="av8-0g-cbG"/>
                             <constraint firstItem="5oc-Dz-SHq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="F90-YJ-vTR" secondAttribute="bottom" constant="8" id="fNT-PO-fU6"/>
                             <constraint firstItem="F90-YJ-vTR" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" constant="24" id="g1d-YH-5AI"/>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="bottom" secondItem="5oc-Dz-SHq" secondAttribute="bottom" constant="24" id="hk7-JQ-mbf"/>
                             <constraint firstItem="F90-YJ-vTR" firstAttribute="top" secondItem="LgU-HG-02N" secondAttribute="bottom" constant="24" id="iRr-1h-rS3"/>
+                            <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="Xp1-l7-m8l" secondAttribute="trailing" constant="24" id="xqn-yB-pbS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6d6-7C-5Bn"/>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="F90-YJ-vTR" id="r7Q-Gb-eqN"/>
+                        <outlet property="mainImageView" destination="LgU-HG-02N" id="jaH-fn-8qy"/>
+                        <outlet property="nextStepButton" destination="5oc-Dz-SHq" id="vHj-8u-93e"/>
+                        <outlet property="welcomeLabel" destination="Xp1-l7-m8l" id="VDh-0L-Enh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxA-O1-jeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
