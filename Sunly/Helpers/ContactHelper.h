@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Contacts/Contacts.h>
+
+@import Contacts;
+@import CoreData;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactHelper : NSObject
+
++ (CNAuthorizationStatus)currentStatus;
++ (void)askContactsPermission:(void (^)(CNAuthorizationStatus status))completion;
++ (NSArray<CNContact *> *__nullable)fetchContactWithAddress;
++ (void)store:(NSArray<CNContact *> *__nullable)contacts with:(NSManagedObjectContext *__nonnull)managedObjectContext;
 
 @end
 

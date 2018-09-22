@@ -12,3 +12,4 @@
 
 FOUNDATION_EXPORT NSString *const OnBoardingStoryboardName;
 FOUNDATION_EXPORT NSString *const ContactPermissionViewControllerIdentifier;
+//FOUNDATION_EXPORT NSString *const AppDidBecomeActiveNotificationName;

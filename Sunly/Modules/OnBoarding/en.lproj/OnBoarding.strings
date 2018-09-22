@@ -9,3 +9,10 @@
 "ContactPermissionWelcome" = "☀️ Sunly ☀️";
 "ContactPermissionInfo" = "In order to show your friends weather, we need to access your iPhone contacts. We will only fetch their name, profile picture and location.";
 "ContactPermissionAction" = "Allow access to contacts";
+"ContactPermissionRestrictedTitle" = "Uh oh 😢";
+"ContactPermissionRestrictedMessage" = "Seems like your parents don't want us to fetch your contact. Check with them and try again.";
+"ContactPermissionRestrictedOk" = "Ok";
+"ContactPermissionDeniedTitle" = "Uh oh 😢";
+"ContactPermissionDeniedMessage" = "Seems like you didn't let us fetch your contact. Please enable this in your settings.";
+"ContactPermissionDeniedOk" = "Ok";
+"ContactPermissionDeniedSettings" = "👉 Settings";

@@ -16,7 +16,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -84,6 +83,10 @@
     }
     
     return _persistentContainer;
+}
+
++ (NSPersistentContainer * __nonnull)persistentContainer {
+    return [(AppDelegate *)[[UIApplication sharedApplication] delegate] persistentContainer];
 }
 
 #pragma mark - Core Data Saving support

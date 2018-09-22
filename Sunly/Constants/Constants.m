@@ -10,3 +10,5 @@
 
 NSString *const OnBoardingStoryboardName = @"OnBoarding";
 NSString *const ContactPermissionViewControllerIdentifier = @"ContactPermissionViewController";
+//NSString *const AppDidBecomeActiveNotificationName = @"AppDidBecomeActiveNotificationName";
+

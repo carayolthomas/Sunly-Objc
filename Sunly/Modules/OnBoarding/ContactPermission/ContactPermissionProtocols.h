@@ -44,6 +44,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// - parameter: color The background color
 - (void)configureBackgroundColor:(UIColor *)color;
 
+/// Shows a basic alert with cancel button
+/// - parameter: title The title
+/// - parameter: message The message
+- (void)showAlertWith:(NSString *)title and:(NSString *)message;
+
+/// Shows an alert with a cancel button and an app settings button
+/// - parameter: title The title
+/// - parameter: message The message
+- (void)showSettingsAlertWith:(NSString *)title and:(NSString *)message;
+
 @end
 
 #pragma mark - ContactPermissionPresenterToInteractor
@@ -82,6 +92,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Callback when view is loaded
 - (void)viewDidLoad;
+
+/// Callback when view has appeared
+- (void)viewDidAppear;
 
 /// Callback when next button is tapped
 - (void)nextButtonTapped;

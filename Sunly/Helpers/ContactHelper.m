@@ -7,10 +7,19 @@
 //
 
 #import "ContactHelper.h"
-#import "SunlyContact.h"
 #import "CNContact+Filter.h"
+#import "Contact+CoreDataProperties.h"
+#import "Location+CoreDataProperties.h"
+
+#import <CoreData/CoreData.h>
+#import <Contacts/Contacts.h>
 
 @implementation ContactHelper
+
++ (CNAuthorizationStatus)currentStatus {
+    CNEntityType entityType = CNEntityTypeContacts;
+    return [CNContactStore authorizationStatusForEntityType:entityType];
+}
 
 + (void)askContactsPermission:(void (^)(CNAuthorizationStatus status))completion {
     CNEntityType entityType = CNEntityTypeContacts;
@@ -18,9 +27,13 @@
         CNContactStore * contactStore = [[CNContactStore alloc] init];
         [contactStore requestAccessForEntityType:entityType completionHandler:^(BOOL granted, NSError * __nullable error) {
             if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
                 completion(CNAuthorizationStatusAuthorized);
+                });
             } else {
-                completion(CNAuthorizationStatusDenied);
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    completion(CNAuthorizationStatusDenied);
+                });
             }
         }];
     } else {
@@ -58,9 +71,41 @@
     return contacts;
 }
 
-+ (NSArray<SunlyContact *> *__nonnull)transform:(NSArray<CNContact *> *__nullable)contacts {
-    // TODO:
-    return nil;
++ (void)store:(NSArray<CNContact *> *__nullable)contacts with:(NSManagedObjectContext *__nonnull)managedObjectContext {
+    
+    NSError *error = nil;
+    
+    for (CNContact *contact in contacts) {
+        
+        NSFetchRequest *existingRequest = [NSFetchRequest fetchRequestWithEntityName:@"Contact"];
+        [existingRequest setPredicate:[NSPredicate predicateWithFormat:@"identifier == %@", contact.identifier]];
+        Contact *existingContact = [managedObjectContext executeFetchRequest:existingRequest error:&error].firstObject;
+        
+        if (existingContact) {
+            existingContact.identifier = contact.identifier;
+            existingContact.fullname = [NSString stringWithFormat:@"%@ %@", contact.givenName, contact.familyName];
+            existingContact.thumbnail = contact.thumbnailImageData;
+            existingContact.picture = contact.imageData;
+            existingContact.location.city = contact.postalAddress.city;
+            existingContact.location.country = contact.postalAddress.country;
+        } else {
+            Contact *object = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:managedObjectContext];
+            object.identifier = contact.identifier;
+            object.fullname = [NSString stringWithFormat:@"%@ %@", contact.givenName, contact.familyName];
+            object.thumbnail = contact.thumbnailImageData;
+            object.picture = contact.imageData;
+            object.location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:managedObjectContext];
+            object.location.city = contact.postalAddress.city;
+            object.location.country = contact.postalAddress.country;
+        }
+    }
+    
+    
+    if ([managedObjectContext save:&error] == NO) {
+        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    
+    NSLog(@"SAVED!");
 }
 
 @end

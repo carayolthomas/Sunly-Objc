@@ -36,7 +36,6 @@
 		AF06B22221564D4C006CC80C /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B20F21564D4C006CC80C /* Montserrat-SemiBold.ttf */; };
 		AF06B22321564D4C006CC80C /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF06B21021564D4C006CC80C /* Montserrat-ThinItalic.ttf */; };
 		AF06B22621564F48006CC80C /* UIButton+Swag.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22521564F48006CC80C /* UIButton+Swag.m */; };
-		AF06B22921565A07006CC80C /* SunlyContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22821565A07006CC80C /* SunlyContact.m */; };
 		AF06B22C21566251006CC80C /* CNContact+Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22B21566251006CC80C /* CNContact+Filter.m */; };
 		AF06B23121566973006CC80C /* ContactHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B23021566973006CC80C /* ContactHelper.m */; };
 		AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF06B27321566B3D006CC80C /* Sunly.xcdatamodeld */; };
@@ -106,8 +105,6 @@
 		AF06B21021564D4C006CC80C /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		AF06B22421564F07006CC80C /* UIButton+Swag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Swag.h"; sourceTree = "<group>"; };
 		AF06B22521564F48006CC80C /* UIButton+Swag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Swag.m"; sourceTree = "<group>"; };
-		AF06B22721565A07006CC80C /* SunlyContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunlyContact.h; sourceTree = "<group>"; };
-		AF06B22821565A07006CC80C /* SunlyContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunlyContact.m; sourceTree = "<group>"; };
 		AF06B22A21566228006CC80C /* CNContact+Filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CNContact+Filter.h"; sourceTree = "<group>"; };
 		AF06B22B21566251006CC80C /* CNContact+Filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CNContact+Filter.m"; sourceTree = "<group>"; };
 		AF06B22F21566973006CC80C /* ContactHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactHelper.h; sourceTree = "<group>"; };
@@ -269,8 +266,6 @@
 			children = (
 				AF06B1FC21564A77006CC80C /* OnBoarding.strings */,
 				AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */,
-				AF06B22721565A07006CC80C /* SunlyContact.h */,
-				AF06B22821565A07006CC80C /* SunlyContact.m */,
 				AF1547C621559AD900347AF7 /* ContactPermission */,
 				AF1547C721559AF700347AF7 /* LocationPermission */,
 			);
@@ -603,7 +598,6 @@
 				AF9DECD121558CF300844449 /* main.m in Sources */,
 				AF06B22C21566251006CC80C /* CNContact+Filter.m in Sources */,
 				AF9DECC321558CF100844449 /* AppDelegate.m in Sources */,
-				AF06B22921565A07006CC80C /* SunlyContact.m in Sources */,
 				AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */,
 				AF06B22621564F48006CC80C /* UIButton+Swag.m in Sources */,
 			);

@@ -25,6 +25,11 @@
     [[self presenter] viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[self presenter] viewDidAppear];
+}
+
 - (IBAction)nextStepButtonAction:(id)sender {
     [[self presenter] nextButtonTapped];
 }
@@ -53,6 +58,22 @@
 
 - (void)configureBackgroundColor:(nonnull UIColor *)color {
     [[self view] setBackgroundColor:color];
+}
+
+- (void)showAlertWith:(NSString *)title and:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedStringFromTable(@"ContactPermissionRestrictedOk", @"OnBoarding", @"") style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)showSettingsAlertWith:(NSString *)title and:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:NSLocalizedStringFromTable(@"ContactPermissionDeniedSettings", @"OnBoarding", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+    }];
+    [alertController addAction:settingsAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

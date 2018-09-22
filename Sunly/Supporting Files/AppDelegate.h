@@ -16,6 +16,7 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 - (void)saveContext;
++ (NSPersistentContainer * __nonnull)persistentContainer;
 
 @end
 
