@@ -16,6 +16,9 @@
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Contact Permission View Controller-->
@@ -44,12 +47,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0sY-Xf-1bc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                 <connections>
                                     <action selector="nextStepButtonAction:" destination="zvK-fI-zh5" eventType="touchUpInside" id="kfE-fk-UAJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-l7-m8l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-l7-m8l">
                                 <rect key="frame" x="24" y="68" width="327" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="-644" y="-350.37481259370315"/>
         </scene>
-        <!--View Controller-->
+        <!--Location Permission View Controller-->
         <scene sceneID="iRG-wl-IrA">
             <objects>
-                <viewController id="m58-HV-3k1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationPermissionViewController" id="m58-HV-3k1" customClass="LocationPermissionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGt-8V-MPm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,9 +102,9 @@
                                     <constraint firstAttribute="width" constant="100" id="p4t-m9-7dr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DV-hm-Ah8">
-                                <rect key="frame" x="24" y="387.5" width="327" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DV-hm-Ah8">
+                                <rect key="frame" x="24" y="387.5" width="327" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -110,11 +113,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0u5-oG-1na"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <connections>
+                                    <action selector="nextStepButtonAction:" destination="m58-HV-3k1" eventType="touchUpInside" id="AtC-ix-9Lf"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS6-AF-iQS">
-                                <rect key="frame" x="24" y="68" width="327" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MS6-AF-iQS">
+                                <rect key="frame" x="24" y="68" width="327" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -137,6 +143,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FVA-i4-kZH"/>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="2DV-hm-Ah8" id="adm-5s-yWd"/>
+                        <outlet property="mainImageView" destination="jun-2k-rco" id="2p3-vU-xzp"/>
+                        <outlet property="nextStepButton" destination="BIa-Ur-lLX" id="7hi-qY-qaY"/>
+                        <outlet property="welcomeLabel" destination="MS6-AF-iQS" id="zNP-PC-ZSP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7r-LD-kM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,5 +10,6 @@
 
 NSString *const OnBoardingStoryboardName = @"OnBoarding";
 NSString *const ContactPermissionViewControllerIdentifier = @"ContactPermissionViewController";
-//NSString *const AppDidBecomeActiveNotificationName = @"AppDidBecomeActiveNotificationName";
-
+NSString *const LocationPermissionViewControllerIdentifier = @"LocationPermissionViewController";
+NSString *const UserGivenNameKey = @"UserGivenNameKey";
+NSString *const UserCoordinateKey = @"UserCoordinateKey";

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@import Contacts;
+
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - ContactPermissionInteractorToPresenter
@@ -63,6 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 @property (nonatomic, weak, nullable) id<ContactPermissionInteractorToPresenter> presenter;
+
+/// Store contacts
+/// - parameter: contacts The contact list
+- (void)storeContacts:(NSArray<CNContact *> *)contacts;
 
 @end
 

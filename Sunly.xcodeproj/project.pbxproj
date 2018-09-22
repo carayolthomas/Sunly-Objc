@@ -39,6 +39,12 @@
 		AF06B22C21566251006CC80C /* CNContact+Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B22B21566251006CC80C /* CNContact+Filter.m */; };
 		AF06B23121566973006CC80C /* ContactHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B23021566973006CC80C /* ContactHelper.m */; };
 		AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF06B27321566B3D006CC80C /* Sunly.xcdatamodeld */; };
+		AF06B28A2156A1E4006CC80C /* LocationPermissionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2812156A1E3006CC80C /* LocationPermissionRouter.m */; };
+		AF06B28B2156A1E4006CC80C /* LocationPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2832156A1E3006CC80C /* LocationPermissionViewController.m */; };
+		AF06B28C2156A1E4006CC80C /* LocationPermissionInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2842156A1E3006CC80C /* LocationPermissionInteractor.m */; };
+		AF06B28D2156A1E4006CC80C /* LocationPermissionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2852156A1E3006CC80C /* LocationPermissionPresenter.m */; };
+		AF06B2902156A510006CC80C /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B28F2156A510006CC80C /* LocationHelper.m */; };
+		AF06B2922156C6C1006CC80C /* searching-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2912156C6C1006CC80C /* searching-animation.json */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
@@ -110,6 +116,18 @@
 		AF06B22F21566973006CC80C /* ContactHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactHelper.h; sourceTree = "<group>"; };
 		AF06B23021566973006CC80C /* ContactHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactHelper.m; sourceTree = "<group>"; };
 		AF06B27421566B3D006CC80C /* Sunly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sunly.xcdatamodel; sourceTree = "<group>"; };
+		AF06B2812156A1E3006CC80C /* LocationPermissionRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPermissionRouter.m; sourceTree = "<group>"; };
+		AF06B2822156A1E3006CC80C /* LocationPermissionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPermissionPresenter.h; sourceTree = "<group>"; };
+		AF06B2832156A1E3006CC80C /* LocationPermissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPermissionViewController.m; sourceTree = "<group>"; };
+		AF06B2842156A1E3006CC80C /* LocationPermissionInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPermissionInteractor.m; sourceTree = "<group>"; };
+		AF06B2852156A1E3006CC80C /* LocationPermissionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPermissionPresenter.m; sourceTree = "<group>"; };
+		AF06B2862156A1E4006CC80C /* LocationPermissionInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPermissionInteractor.h; sourceTree = "<group>"; };
+		AF06B2872156A1E4006CC80C /* LocationPermissionProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPermissionProtocols.h; sourceTree = "<group>"; };
+		AF06B2882156A1E4006CC80C /* LocationPermissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPermissionViewController.h; sourceTree = "<group>"; };
+		AF06B2892156A1E4006CC80C /* LocationPermissionRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPermissionRouter.h; sourceTree = "<group>"; };
+		AF06B28E2156A510006CC80C /* LocationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
+		AF06B28F2156A510006CC80C /* LocationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
+		AF06B2912156C6C1006CC80C /* searching-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "searching-animation.json"; sourceTree = "<group>"; };
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
 		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
@@ -235,8 +253,17 @@
 			children = (
 				AF06B22F21566973006CC80C /* ContactHelper.h */,
 				AF06B23021566973006CC80C /* ContactHelper.m */,
+				AF06B28E2156A510006CC80C /* LocationHelper.h */,
+				AF06B28F2156A510006CC80C /* LocationHelper.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AF06B2932156CCDE006CC80C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		AF1547C321559AB900347AF7 /* Supporting Files */ = {
@@ -256,6 +283,7 @@
 		AF1547C421559AC700347AF7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AF06B2932156CCDE006CC80C /* Dashboard */,
 				AF1547C521559ACD00347AF7 /* OnBoarding */,
 			);
 			path = Modules;
@@ -291,6 +319,16 @@
 		AF1547C721559AF700347AF7 /* LocationPermission */ = {
 			isa = PBXGroup;
 			children = (
+				AF06B2912156C6C1006CC80C /* searching-animation.json */,
+				AF06B2872156A1E4006CC80C /* LocationPermissionProtocols.h */,
+				AF06B2882156A1E4006CC80C /* LocationPermissionViewController.h */,
+				AF06B2832156A1E3006CC80C /* LocationPermissionViewController.m */,
+				AF06B2862156A1E4006CC80C /* LocationPermissionInteractor.h */,
+				AF06B2842156A1E3006CC80C /* LocationPermissionInteractor.m */,
+				AF06B2822156A1E3006CC80C /* LocationPermissionPresenter.h */,
+				AF06B2852156A1E3006CC80C /* LocationPermissionPresenter.m */,
+				AF06B2892156A1E4006CC80C /* LocationPermissionRouter.h */,
+				AF06B2812156A1E3006CC80C /* LocationPermissionRouter.m */,
 			);
 			path = LocationPermission;
 			sourceTree = "<group>";
@@ -481,6 +519,7 @@
 				AF06B22221564D4C006CC80C /* Montserrat-SemiBold.ttf in Resources */,
 				AF06B21B21564D4C006CC80C /* Montserrat-ExtraBold.ttf in Resources */,
 				AF06B22321564D4C006CC80C /* Montserrat-ThinItalic.ttf in Resources */,
+				AF06B2922156C6C1006CC80C /* searching-animation.json in Resources */,
 				AF06B21821564D4C006CC80C /* Montserrat-LightItalic.ttf in Resources */,
 				AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */,
 				AF06B21C21564D4C006CC80C /* Montserrat-ExtraLight.ttf in Resources */,
@@ -591,7 +630,10 @@
 				AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */,
 				AF06B23121566973006CC80C /* ContactHelper.m in Sources */,
 				AF06B1EF21563A06006CC80C /* ContactPermissionRouter.m in Sources */,
+				AF06B2902156A510006CC80C /* LocationHelper.m in Sources */,
+				AF06B28A2156A1E4006CC80C /* LocationPermissionRouter.m in Sources */,
 				AF06B1F7215642F8006CC80C /* UIColor+Additions.m in Sources */,
+				AF06B28C2156A1E4006CC80C /* LocationPermissionInteractor.m in Sources */,
 				AF06B1E6215637C3006CC80C /* OnBoardingNavigationController.m in Sources */,
 				AF06B1F321564076006CC80C /* Constants.m in Sources */,
 				AF06B1EC215639F9006CC80C /* ContactPermissionPresenter.m in Sources */,
@@ -599,7 +641,9 @@
 				AF06B22C21566251006CC80C /* CNContact+Filter.m in Sources */,
 				AF9DECC321558CF100844449 /* AppDelegate.m in Sources */,
 				AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */,
+				AF06B28B2156A1E4006CC80C /* LocationPermissionViewController.m in Sources */,
 				AF06B22621564F48006CC80C /* UIButton+Swag.m in Sources */,
+				AF06B28D2156A1E4006CC80C /* LocationPermissionPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,7 +825,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.Sunly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -800,7 +844,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appstud.Sunly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

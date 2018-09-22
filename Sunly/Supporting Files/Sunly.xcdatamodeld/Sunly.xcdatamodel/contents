@@ -5,14 +5,15 @@
         <attribute name="identifier" attributeType="String" syncable="YES"/>
         <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
-        <relationship name="location" maxCount="1" deletionRule="Cascade" destinationEntity="Location" syncable="YES"/>
+        <relationship name="location" maxCount="1" deletionRule="Cascade" destinationEntity="Location" inverseName="contact" inverseEntity="Location" syncable="YES"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="location" inverseEntity="Contact" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contact" positionX="-294.42578125" positionY="-74.51171875" width="128" height="120"/>
-        <element name="Location" positionX="-45" positionY="45" width="128" height="75"/>
+        <element name="Location" positionX="-45" positionY="45" width="128" height="90"/>
     </elements>
 </model>

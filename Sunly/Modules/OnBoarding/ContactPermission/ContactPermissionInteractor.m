@@ -7,7 +7,18 @@
 //
 
 #import "ContactPermissionInteractor.h"
+#import "ContactHelper.h"
+#import "AppDelegate.h"
+
+#import <Contacts/Contacts.h>
 
 @implementation ContactPermissionInteractor
+
 @synthesize presenter;
+
+- (void)storeContacts:(NSArray<CNContact *> *)contacts {
+    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
+    [ContactHelper store:contacts with:managedObjectContext];
+}
+
 @end

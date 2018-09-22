@@ -16,3 +16,15 @@
 "ContactPermissionDeniedMessage" = "Seems like you didn't let us fetch your contact. Please enable this in your settings.";
 "ContactPermissionDeniedOk" = "Ok";
 "ContactPermissionDeniedSettings" = "👉 Settings";
+
+"LocationPermissionWelcome" = "☀️ Welcome ☀️";
+"LocationPermissionWelcomeFormat" = "☀️ Welcome %@ ☀️";
+"LocationPermissionInfo" = "In order to tell you the weather around you today, we need to access your location. We will only fetch your location a few times, it won't drain your battery.";
+"LocationPermissionAction" = "Allow access to location";
+"LocationPermissionRestrictedTitle" = "Uh oh 😢";
+"LocationPermissionRestrictedMessage" = "Seems like your parents don't want us to get your location. Check with them and try again.";
+"LocationPermissionRestrictedOk" = "Ok";
+"LocationPermissionDeniedTitle" = "Uh oh 😢";
+"LocationPermissionDeniedMessage" = "Seems like you didn't let us access your location. Please enable this in your settings.";
+"LocationPermissionDeniedOk" = "Ok";
+"LocationPermissionDeniedSettings" = "👉 Settings";

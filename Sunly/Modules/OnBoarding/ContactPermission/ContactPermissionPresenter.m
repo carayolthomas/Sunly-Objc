@@ -10,16 +10,9 @@
 #import "UIColor+Additions.h"
 #import "CNContact+Filter.h"
 #import "ContactHelper.h"
-#import "AppDelegate.h"
 
 #import <Contacts/Contacts.h>
 #import <CoreData/CoreData.h>
-
-@interface ContactPermissionPresenter ()
-
-@property (strong, nonatomic, readonly) NSPersistentContainer *persistentContainer;
-
-@end
 
 @implementation ContactPermissionPresenter
 
@@ -43,8 +36,9 @@
 #pragma mark - ContactPermissionViewToPresenter
 
 - (void)nextButtonTapped {
+    __weak ContactPermissionPresenter *weakSelf = self;
     [ContactHelper askContactsPermission:^(CNAuthorizationStatus status) {
-        [self handeContactAuthorizationStatus:status];
+        [weakSelf handleContactAuthorizationStatus:status];
     }];
 }
 
@@ -57,12 +51,13 @@
 }
 
 - (void)viewDidAppear {
+    __weak ContactPermissionPresenter *weakSelf = self;
     [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-        [self handeContactAuthorizationStatus:[ContactHelper currentStatus]];
+        [weakSelf handleContactAuthorizationStatus:[ContactHelper currentStatus]];
     }];
 }
 
-- (void)handeContactAuthorizationStatus:(CNAuthorizationStatus)status {
+- (void)handleContactAuthorizationStatus:(CNAuthorizationStatus)status {
     if (status == CNAuthorizationStatusAuthorized) {
         [self contactAuthorizedBehavior];
     } else if (status == CNAuthorizationStatusRestricted) {
@@ -74,8 +69,8 @@
 
 - (void)contactAuthorizedBehavior {
     NSArray<CNContact *> *contacts = [ContactHelper fetchContactWithAddress];
-    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
-    [ContactHelper store:contacts with:managedObjectContext];
+    [[self interactor] storeContacts:contacts];
+    [[self router] showNextStepFrom:[self view]];
 }
 
 - (void)contactRestrictedBehavior {
@@ -84,10 +79,6 @@
 
 - (void)contactDeniedBehavior {
     [[self view] showSettingsAlertWith:NSLocalizedStringFromTable(@"ContactPermissionDeniedTitle", @"OnBoarding", @"") and:NSLocalizedStringFromTable(@"ContactPermissionDeniedMessage", @"OnBoarding", @"")];
-}
-
-- (void)dealloc {
-    NSLog(@"dealloc");
 }
 
 @end

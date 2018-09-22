@@ -11,7 +11,7 @@
 #import "ContactPermissionPresenter.h"
 #import "ContactPermissionInteractor.h"
 #import "Constants.h"
-
+#import "LocationPermissionRouter.h"
 
 @implementation ContactPermissionRouter
 
@@ -26,7 +26,8 @@
 }
 
 - (void)showNextStepFrom:(nonnull id<ContactPermissionPresenterToView>)view {
-    // TODO:
+    UIViewController *nextStep = [LocationPermissionRouter createModule];
+    [[(UIViewController *)view navigationController] setViewControllers:@[nextStep] animated:YES];
 }
 
 @end

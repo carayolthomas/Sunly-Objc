@@ -10,6 +10,7 @@
 #import "CNContact+Filter.h"
 #import "Contact+CoreDataProperties.h"
 #import "Location+CoreDataProperties.h"
+#import "Constants.h"
 
 #import <CoreData/CoreData.h>
 #import <Contacts/Contacts.h>
@@ -67,6 +68,15 @@
     }];
     
     [contacts filterUsingPredicate:postalAddressPredicate];
+    
+    NSError *error;
+    CNContactFetchRequest *meRequest = [[CNContactFetchRequest alloc] initWithKeysToFetch:keysToFetch];
+    [contactStore enumerateContactsWithFetchRequest:meRequest error:&error usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
+        // Quick trick here. The first is most certainly you. So I save this in defaults to remember you 🔥
+        [[NSUserDefaults standardUserDefaults] setObject:contact.givenName forKey:UserGivenNameKey];
+        // End of the trick.
+        *stop = YES;
+    }];
     
     return contacts;
 }
