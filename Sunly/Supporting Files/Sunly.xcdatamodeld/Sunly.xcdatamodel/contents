@@ -17,15 +17,17 @@
     <entity name="Weather" representedClassName="Weather" syncable="YES" codeGenerationType="class">
         <attribute name="currentIcon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="currentPrecip" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="currentScore" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="currentTemperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nextWeekendIcon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nextWeekendPrecip" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nextWeekendScore" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nextWeekendTemperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="weather" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contact" positionX="-294.42578125" positionY="-74.51171875" width="128" height="120"/>
         <element name="Location" positionX="-98.15234375" positionY="58.76171875" width="128" height="120"/>
-        <element name="Weather" positionX="112.56640625" positionY="205.08203125" width="128" height="150"/>
+        <element name="Weather" positionX="112.56640625" positionY="205.08203125" width="128" height="180"/>
     </elements>
 </model>

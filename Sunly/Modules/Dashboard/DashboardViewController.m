@@ -34,6 +34,10 @@
     [self showMainAnimation];
 }
 
+- (void)hideComputing {
+    [self hideMainAnimation];
+}
+
 #pragma mark - Lottie animation
 
 - (void)showMainAnimation {
@@ -51,6 +55,12 @@
         [[[self.animationView heightAnchor] constraintEqualToConstant:200.f] setActive:YES];
     } else {
         [self.animationView play];
+    }
+}
+
+- (void)hideMainAnimation {
+    if (self.animationView) {
+        [self.animationView stop];
     }
 }
 
