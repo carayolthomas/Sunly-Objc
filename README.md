@@ -1,7 +1,7 @@
+[![Build Status](https://travis-ci.org/carayolthomas/Sunly.svg?branch=master)](https://travis-ci.org/carayolthomas/Sunly) [![codecov](https://codecov.io/gh/carayolthomas/Sunly/branch/master/graph/badge.svg)](https://codecov.io/gh/carayolthomas/Sunly)
+
 # Sunly
 ☀️ The app that makes the weather friendly
-
-[![Build Status](https://travis-ci.org/carayolthomas/Sunly.svg?branch=master)](https://travis-ci.org/carayolthomas/Sunly) [![codecov](https://codecov.io/gh/carayolthomas/Sunly/branch/master/graph/badge.svg)](https://codecov.io/gh/carayolthomas/Sunly)
 
 ## ☀️ About
 Sunly is the app to know your best friends weather. It will also tell you where to spend your next week-end 🌴
