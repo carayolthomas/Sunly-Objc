@@ -41,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showComputing;
 - (void)hideComputing;
 
+- (void)reloadData;
+
 @end
 
 #pragma mark - DashboardPresenterToInteractor
@@ -79,6 +81,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Callback when view is loaded
 - (void)viewDidLoad;
+
+- (NSInteger)numberOfSections;
+- (NSInteger)numberOfRowsInSection:(NSInteger)section;
+- (NSString *)purpose:(NSIndexPath *)indexPath;
+- (NSString *)info:(NSIndexPath *)indexPath;
+- (NSAttributedString *)temperatureLocation:(NSIndexPath *)indexPath;
+- (UIImage *)image:(NSIndexPath *)indexPath;
+- (UIColor *)shadowColor:(NSIndexPath *)indexPath;
 
 @end
 

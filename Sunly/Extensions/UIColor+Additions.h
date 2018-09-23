@@ -13,6 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIColor (Additions)
 
 + (UIColor *)skyBlueColor;
++ (UIColor *)sunnyColor;
++ (UIColor *)cloudyColor;
++ (UIColor *)rainyColor;
++ (UIColor *)clearNightColor;
++ (UIColor *)cloudyNightColor;
++ (UIColor *)thunderColor;
++ (UIColor *)partialCloudyColor;
 
 @end
 

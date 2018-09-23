@@ -5,3 +5,14 @@
   Created by Thomas Carayol on 22/09/2018.
   Copyright © 2018 Thomas Carayol. All rights reserved.
 */
+
+"CurrentWeatherPurpose" = "Today";
+"BestCurrentWeatherPurpose" = "Best today";
+"WorstCurrentWeatherPurpose" = "Worst today";
+"BestNextWeatherPurpose" = "Best next weekend";
+"WorstNextWeatherPurpose" = "Worst next weekend";
+"Location" = "in ";
+"InfoBestNext" = "Perfect weekend to spend with %@ 🌴";
+"InfoWorstNext" = "Don't even think about visiting %@! ⛔️";
+"InfoBestToday" = "%@ is quite lucky today 🍹";
+"InfoWorstToday" = "Poor %@ 🧣";

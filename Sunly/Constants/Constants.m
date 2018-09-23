@@ -15,3 +15,4 @@ NSString *const LocationPermissionViewControllerIdentifier = @"LocationPermissio
 NSString *const UserGivenNameKey = @"UserGivenNameKey";
 NSString *const UserCoordinateKey = @"UserCoordinateKey";
 NSString *const DashboardViewControllerIdentifier = @"DashboardViewController";
+NSString *const WeatherCollectionViewCellIdentifier = @"WeatherCollectionViewCell";

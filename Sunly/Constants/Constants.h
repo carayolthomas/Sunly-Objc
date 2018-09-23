@@ -17,3 +17,4 @@ FOUNDATION_EXPORT NSString *const LocationPermissionViewControllerIdentifier;
 FOUNDATION_EXPORT NSString *const UserGivenNameKey;
 FOUNDATION_EXPORT NSString *const UserCoordinateKey;
 FOUNDATION_EXPORT NSString *const DashboardViewControllerIdentifier;
+FOUNDATION_EXPORT NSString *const WeatherCollectionViewCellIdentifier;

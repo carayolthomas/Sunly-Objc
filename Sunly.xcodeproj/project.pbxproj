@@ -53,6 +53,7 @@
 		AF06B2A42156D6CA006CC80C /* DashboardPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */; };
 		AF06B2A821570DD1006CC80C /* compute-data-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2A721570DD1006CC80C /* compute-data-animation.json */; };
 		AF06B2AB21579C7B006CC80C /* WeatherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2AA21579C7B006CC80C /* WeatherHelper.m */; };
+		AF06B2AF2157CBD4006CC80C /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
@@ -150,6 +151,8 @@
 		AF06B2A721570DD1006CC80C /* compute-data-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "compute-data-animation.json"; sourceTree = "<group>"; };
 		AF06B2A921579C7B006CC80C /* WeatherHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherHelper.h; sourceTree = "<group>"; };
 		AF06B2AA21579C7B006CC80C /* WeatherHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherHelper.m; sourceTree = "<group>"; };
+		AF06B2AD2157CBD4006CC80C /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
+		AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
 		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
@@ -286,6 +289,7 @@
 		AF06B2932156CCDE006CC80C /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				AF06B2AC2157CBBE006CC80C /* Cell */,
 				AF06B2A721570DD1006CC80C /* compute-data-animation.json */,
 				AF06B2942156D57E006CC80C /* Dashboard.strings */,
 				AF06B2962156D58F006CC80C /* Dashboard.storyboard */,
@@ -300,6 +304,15 @@
 				AF06B2992156D6CA006CC80C /* DashboardRouter.m */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AF06B2AC2157CBBE006CC80C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF06B2AD2157CBD4006CC80C /* WeatherCollectionViewCell.h */,
+				AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AF1547C321559AB900347AF7 /* Supporting Files */ = {
@@ -670,6 +683,7 @@
 				AF06B27521566B3D006CC80C /* Sunly.xcdatamodeld in Sources */,
 				AF06B23121566973006CC80C /* ContactHelper.m in Sources */,
 				AF06B1EF21563A06006CC80C /* ContactPermissionRouter.m in Sources */,
+				AF06B2AF2157CBD4006CC80C /* WeatherCollectionViewCell.m in Sources */,
 				AF06B2A42156D6CA006CC80C /* DashboardPresenter.m in Sources */,
 				AF06B2902156A510006CC80C /* LocationHelper.m in Sources */,
 				AF06B28A2156A1E4006CC80C /* LocationPermissionRouter.m in Sources */,

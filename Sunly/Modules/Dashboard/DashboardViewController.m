@@ -8,12 +8,16 @@
 
 #import "DashboardViewController.h"
 #import "UIButton+Swag.h"
+#import "WeatherCollectionViewCell.h"
+#import "Constants.h"
 
 #import <Lottie/Lottie.h>
 
-@interface DashboardViewController ()
+@interface DashboardViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) LOTAnimationView *animationView;
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -21,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.collectionView.dataSource = self;
     [[self presenter] viewDidLoad];
 }
 
@@ -36,6 +41,12 @@
 
 - (void)hideComputing {
     [self hideMainAnimation];
+}
+
+- (void)reloadData {
+    [[self collectionView] performBatchUpdates:^{
+        [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    } completion:nil];
 }
 
 #pragma mark - Lottie animation
@@ -61,7 +72,32 @@
 - (void)hideMainAnimation {
     if (self.animationView) {
         [self.animationView stop];
+        [self.animationView setHidden:YES];
     }
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return [[self presenter] numberOfSections];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [[self presenter] numberOfRowsInSection:section];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    WeatherCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:WeatherCollectionViewCellIdentifier forIndexPath:indexPath];
+    [cell reload:[[self presenter] image:indexPath]
+          topText:[[self presenter] purpose:indexPath]
+          midText:[[self presenter] temperatureLocation:indexPath]
+          bottomText:[[self presenter] info:indexPath]
+          shadowColor:[[self presenter] shadowColor:indexPath]];
+    return cell;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(UIScreen.mainScreen.bounds.size.width - 60, 200);
 }
 
 @end

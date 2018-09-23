@@ -89,7 +89,7 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     NSError *error;
     NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
     NSFetchRequest *weatherRequest = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
-    [weatherRequest setFetchLimit:10];
+    [weatherRequest setFetchLimit:1];
     NSSortDescriptor *sortScore = [NSSortDescriptor sortDescriptorWithKey:@"nextWeekendScore" ascending:YES];
     [weatherRequest setSortDescriptors:@[sortScore]];
     NSArray<Weather *> *weather = [managedObjectContext executeFetchRequest:weatherRequest error:&error];
