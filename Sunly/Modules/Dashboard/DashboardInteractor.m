@@ -234,8 +234,6 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     if ([managedObjectContext save:&error] == NO) {
         NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
     }
-    
-    NSLog(@"SAVED!");
 }
 
 /// Update a weather `NSManagedObject` with data.

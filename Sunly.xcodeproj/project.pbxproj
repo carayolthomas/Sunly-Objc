@@ -52,7 +52,6 @@
 		AF06B2A32156D6CA006CC80C /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B29F2156D6CA006CC80C /* DashboardViewController.m */; };
 		AF06B2A42156D6CA006CC80C /* DashboardPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */; };
 		AF06B2A821570DD1006CC80C /* compute-data-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2A721570DD1006CC80C /* compute-data-animation.json */; };
-		AF06B2AB21579C7B006CC80C /* WeatherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2AA21579C7B006CC80C /* WeatherHelper.m */; };
 		AF06B2AF2157CBD4006CC80C /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
@@ -149,8 +148,6 @@
 		AF06B29F2156D6CA006CC80C /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardPresenter.m; sourceTree = "<group>"; };
 		AF06B2A721570DD1006CC80C /* compute-data-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "compute-data-animation.json"; sourceTree = "<group>"; };
-		AF06B2A921579C7B006CC80C /* WeatherHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherHelper.h; sourceTree = "<group>"; };
-		AF06B2AA21579C7B006CC80C /* WeatherHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherHelper.m; sourceTree = "<group>"; };
 		AF06B2AD2157CBD4006CC80C /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
 		AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -280,8 +277,6 @@
 				AF06B23021566973006CC80C /* ContactHelper.m */,
 				AF06B28E2156A510006CC80C /* LocationHelper.h */,
 				AF06B28F2156A510006CC80C /* LocationHelper.m */,
-				AF06B2A921579C7B006CC80C /* WeatherHelper.h */,
-				AF06B2AA21579C7B006CC80C /* WeatherHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -687,7 +682,6 @@
 				AF06B2A42156D6CA006CC80C /* DashboardPresenter.m in Sources */,
 				AF06B2902156A510006CC80C /* LocationHelper.m in Sources */,
 				AF06B28A2156A1E4006CC80C /* LocationPermissionRouter.m in Sources */,
-				AF06B2AB21579C7B006CC80C /* WeatherHelper.m in Sources */,
 				AF06B1F7215642F8006CC80C /* UIColor+Additions.m in Sources */,
 				AF06B28C2156A1E4006CC80C /* LocationPermissionInteractor.m in Sources */,
 				AF06B2A22156D6CA006CC80C /* DashboardRouter.m in Sources */,

@@ -16,7 +16,10 @@ typedef void(^LocationCompletion)(CLLocation *__nullable location, CLAuthorizati
 
 @interface LocationHelper : NSObject
 
+/// Current location authorization status
 + (CLAuthorizationStatus)currentStatus;
+
+/// Request location permission and return a location if possible
 - (void)askLocationPermission:(LocationCompletion)completion;
 
 @end

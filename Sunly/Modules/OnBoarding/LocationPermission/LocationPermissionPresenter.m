@@ -109,10 +109,6 @@
     });
 }
 
-- (void)dealloc {
-    NSLog(@"dealloc");
-}
-
 #pragma mark - Location
 
 - (void)requestLocation {

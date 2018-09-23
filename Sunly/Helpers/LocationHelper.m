@@ -7,7 +7,6 @@
 //
 
 #import "LocationHelper.h"
-
 #import <CoreLocation/CoreLocation.h>
 
 @interface LocationHelper () <CLLocationManagerDelegate>
@@ -19,10 +18,12 @@
 
 @implementation LocationHelper
 
+/// Current location authorization status
 + (CLAuthorizationStatus)currentStatus {
     return [CLLocationManager authorizationStatus];
 }
 
+/// Request location permission and return a location if possible
 - (void)askLocationPermission:(LocationCompletion)completion {
     self.locationCompletion = completion;
     self.manager = [[CLLocationManager alloc] init];

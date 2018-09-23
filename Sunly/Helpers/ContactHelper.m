@@ -18,11 +18,13 @@
 
 @implementation ContactHelper
 
+/// Current contacts authorization status
 + (CNAuthorizationStatus)currentStatus {
     CNEntityType entityType = CNEntityTypeContacts;
     return [CNContactStore authorizationStatusForEntityType:entityType];
 }
 
+/// Display system popup to ask for permission
 + (void)askContactsPermission:(void (^)(CNAuthorizationStatus status))completion {
     CNEntityType entityType = CNEntityTypeContacts;
     if ([CNContactStore authorizationStatusForEntityType:entityType] == CNAuthorizationStatusNotDetermined) {
@@ -43,6 +45,7 @@
     }
 }
 
+/// Fetch contacts that have at least one postal address in their address book
 + (NSArray<CNContact *> *__nullable)fetchContactWithAddress {
     NSMutableArray<CNContact *> *contacts = [NSMutableArray new];
     NSError *contactError;
@@ -82,6 +85,8 @@
     return contacts;
 }
 
+/// Store contacts for the given managedObjectContext. For each contact, we will try
+/// to geocode their postal address so we can retrieve their weather later.
 + (void)store:(NSArray<CNContact *> *__nullable)contacts with:(NSManagedObjectContext *__nonnull)managedObjectContext {
     
     NSError *error = nil;
@@ -130,8 +135,6 @@
             }];
         }
     }
-    
-    NSLog(@"SAVED!");
 }
 
 @end
