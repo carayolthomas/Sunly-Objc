@@ -19,6 +19,13 @@ I didn't have enough time to create animation from scratch so I used [Lottie](ht
 I use [CocoaPods](https://cocoapods.org) as dependency manager.
 
 ## 🕵️‍♂️ How to test 
+### Add some addresses to your contacts
+Once approved, the app will retrieve your iPhone contacts with postal addresses. So you need to have some contacts with at least one postal address in your address book. Just like John Appleseed below:
+
+![Oops 🧐](/screenshots/postal_addresses.png)
+
+I advice you to do it at least with 5 to 10 contacts. Otherwise test with simulator 😉
+
 ### Clone the project
 
 Run `git clone git@github.com:carayolthomas/Sunly.git`
