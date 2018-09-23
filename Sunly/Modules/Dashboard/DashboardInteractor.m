@@ -12,6 +12,7 @@
 #import "Location+CoreDataProperties.h"
 #import "Weather+CoreDataProperties.h"
 #import "ContactHelper.h"
+#import "Constants.h"
 
 #import <CoreLocation/CoreLocation.h>
 
@@ -55,7 +56,22 @@ typedef void(^FetchDataCompletion)(BOOL finished);
 #pragma mark - Private
 
 - (Weather *)getUserCurrentForecast {
-    // TODO:
+    NSString *coordinate = [[NSUserDefaults standardUserDefaults] objectForKey:UserCoordinateKey];
+    
+    if (!coordinate) {
+        return nil;
+    }
+    
+    double latitude = [[[coordinate componentsSeparatedByString:@","] firstObject] doubleValue];
+    double longitude = [[[coordinate componentsSeparatedByString:@","] lastObject] doubleValue];
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:[[CLLocation alloc] initWithLatitude:latitude longitude:longitude] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (error) {
+            
+        }
+    }]
+    
     return nil;
 }
 

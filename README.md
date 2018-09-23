@@ -42,5 +42,10 @@ Open `Sunly.xcworkspace`
 
 Build & Run 🔥
 
+## 🦁 TODO
+ - Fetch current weather for user location
+ - Unit testing
+ - UI testing
+
 ## 🎁 Licence
 This app is released under the [MIT License](https://github.com/carayolthomas/Sunly/blob/master/LICENSE).
