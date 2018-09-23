@@ -22,7 +22,7 @@ I use [CocoaPods](https://cocoapods.org) as dependency manager.
 ### Add some addresses to your contacts
 Once approved, the app will retrieve your iPhone contacts with postal addresses. So you need to have some contacts with at least one postal address in your address book. Just like John Appleseed below:
 
-![Oops 🧐](/screenshots/postal_addresses.png)
+![Oops 🧐](/screenshots/postal_addresses.png =300x139)
 
 I advice you to do it at least with 5 to 10 contacts. Otherwise test with simulator 😉
 
