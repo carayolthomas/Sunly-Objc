@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Delegates from the interactor (api/storage) to the presenter (business rules)
 @protocol DashboardInteractorToPresenter <NSObject>
+
+- (void)getForecastError;
+
 @end
 
 #pragma mark - DashboardPresenterToView
@@ -30,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// - parameter: message The message
 - (void)showWelcomeMessage:(NSString *)message;
 
+- (void)showComputing;
+
 @end
 
 #pragma mark - DashboardPresenterToInteractor
@@ -39,6 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 @property (nonatomic, weak, nullable) id<DashboardInteractorToPresenter> presenter;
+
+- (void)computeData;
 
 @end
 

@@ -14,6 +14,7 @@
 
 #import <CoreData/CoreData.h>
 #import <Contacts/Contacts.h>
+#import <CoreLocation/CoreLocation.h>
 
 @implementation ContactHelper
 
@@ -98,6 +99,18 @@
             existingContact.picture = contact.imageData;
             existingContact.location.city = contact.postalAddress.city;
             existingContact.location.country = contact.postalAddress.country;
+            
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            [geocoder geocodePostalAddress:contact.postalAddress completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+                
+                if (!error) {
+                    existingContact.location.coordinate = [NSString stringWithFormat:@"%f,%f", placemarks.firstObject.location.coordinate.latitude, placemarks.firstObject.location.coordinate.longitude];
+                }
+                
+                if ([managedObjectContext save:&error] == NO) {
+                    NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+                }
+            }];
         } else {
             Contact *object = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:managedObjectContext];
             object.identifier = contact.identifier;
@@ -107,12 +120,19 @@
             object.location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:managedObjectContext];
             object.location.city = contact.postalAddress.city;
             object.location.country = contact.postalAddress.country;
+            
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            [geocoder geocodePostalAddress:contact.postalAddress completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+                
+                if (!error) {
+                    object.location.coordinate = [NSString stringWithFormat:@"%f,%f", placemarks.firstObject.location.coordinate.latitude, placemarks.firstObject.location.coordinate.longitude];
+                }
+                
+                if ([managedObjectContext save:&error] == NO) {
+                    NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+                }
+            }];
         }
-    }
-    
-    
-    if ([managedObjectContext save:&error] == NO) {
-        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
     }
     
     NSLog(@"SAVED!");

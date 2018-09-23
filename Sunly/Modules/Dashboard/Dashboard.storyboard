@@ -53,6 +53,11 @@
                             <constraint firstItem="1lj-d8-JV9" firstAttribute="bottom" secondItem="mIi-nb-32t" secondAttribute="bottom" id="xli-at-Mqh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1lj-d8-JV9"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mIi-nb-32t"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvb-59-2kY" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,8 @@
 #import "OnBoardingNavigationController.h"
 #import "ContactPermissionRouter.h"
 
+#import <CoreData/CoreData.h>
+
 @interface AppDelegate ()
 
 @end

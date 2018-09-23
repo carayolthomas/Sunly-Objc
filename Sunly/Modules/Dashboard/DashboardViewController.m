@@ -9,7 +9,11 @@
 #import "DashboardViewController.h"
 #import "UIButton+Swag.h"
 
+#import <Lottie/Lottie.h>
+
 @interface DashboardViewController ()
+
+@property (strong, nonatomic) LOTAnimationView *animationView;
 
 @end
 
@@ -24,6 +28,30 @@
 
 - (void)showWelcomeMessage:(NSString *)message {
     [self setTitle:message];
+}
+
+- (void)showComputing {
+    [self showMainAnimation];
+}
+
+#pragma mark - Lottie animation
+
+- (void)showMainAnimation {
+    if (!self.animationView) {
+        self.animationView = [LOTAnimationView animationNamed:@"compute-data-animation"];
+        [self.animationView setContentMode:UIViewContentModeScaleAspectFit];
+        [self.animationView setLoopAnimation:YES];
+        [self.animationView setAnimationSpeed:1.f];
+        [self.animationView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self.animationView play];
+        [[self view] addSubview:self.animationView];
+        [[[self.animationView centerXAnchor] constraintEqualToAnchor:self.view.centerXAnchor] setActive:YES];
+        [[[self.animationView centerYAnchor] constraintEqualToAnchor:self.view.centerYAnchor] setActive:YES];
+        [[[self.animationView widthAnchor] constraintEqualToConstant:200.f] setActive:YES];
+        [[[self.animationView heightAnchor] constraintEqualToConstant:200.f] setActive:YES];
+    } else {
+        [self.animationView play];
+    }
 }
 
 @end

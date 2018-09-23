@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
+
+@import CoreData;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

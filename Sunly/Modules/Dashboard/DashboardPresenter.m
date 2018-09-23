@@ -32,6 +32,8 @@
 
 - (void)viewDidLoad {
     [[self view] showWelcomeMessage:NSLocalizedStringFromTable(@"DashboardWelcome", @"OnBoarding", @"")];
+    [[self view] showComputing];
+    [[self interactor] computeData];
 }
 
 @end
