@@ -48,7 +48,7 @@
     NSError *contactError;
     CNContactStore *contactStore = [[CNContactStore alloc] init];
     [contactStore containersMatchingPredicate:[CNContainer predicateForContainersWithIdentifiers: @[contactStore.defaultContainerIdentifier]] error:&contactError];
-    NSArray * keysToFetch =@[CNContactFamilyNameKey, CNContactGivenNameKey, CNContactPostalAddressesKey, CNContactImageDataAvailableKey, CNContactImageDataKey, CNContactThumbnailImageDataKey];
+    NSArray *keysToFetch = @[CNContactFamilyNameKey, CNContactGivenNameKey, CNContactPostalAddressesKey];
     
     NSArray *containers = [contactStore containersMatchingPredicate:nil error:&contactError];
     
@@ -95,8 +95,6 @@
         if (existingContact) {
             existingContact.identifier = contact.identifier;
             existingContact.fullname = [NSString stringWithFormat:@"%@ %@", contact.givenName, contact.familyName];
-            existingContact.thumbnail = contact.thumbnailImageData;
-            existingContact.picture = contact.imageData;
             existingContact.location.city = contact.postalAddress.city;
             existingContact.location.country = contact.postalAddress.country;
             
@@ -115,8 +113,6 @@
             Contact *object = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:managedObjectContext];
             object.identifier = contact.identifier;
             object.fullname = [NSString stringWithFormat:@"%@ %@", contact.givenName, contact.familyName];
-            object.thumbnail = contact.thumbnailImageData;
-            object.picture = contact.imageData;
             object.location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:managedObjectContext];
             object.location.city = contact.postalAddress.city;
             object.location.country = contact.postalAddress.country;

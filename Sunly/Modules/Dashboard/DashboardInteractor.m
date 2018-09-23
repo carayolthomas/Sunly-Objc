@@ -27,9 +27,16 @@ typedef void(^FetchDataCompletion)(BOOL finished);
 
 @synthesize presenter;
 
+- (void)fetchForecastData {
+    __weak DashboardInteractor *weakSelf = self;
+    [self fetchData:NO completion:^(BOOL finished) {
+        [[weakSelf presenter] fetchContactsAndForecastDataFinished];
+    }];
+}
+
 - (void)fetchContactsAndForecastData {
     __weak DashboardInteractor *weakSelf = self;
-    [self fetchData:^(BOOL finished) {
+    [self fetchData:YES completion:^(BOOL finished) {
         [[weakSelf presenter] fetchContactsAndForecastDataFinished];
     }];
 }
@@ -99,9 +106,11 @@ typedef void(^FetchDataCompletion)(BOOL finished);
 /// Fetch dashboard needed data
 /// 1. Fetch and store contacts
 /// 2. Get forecast for each contact location
-- (void)fetchData:(FetchDataCompletion)completion {
+- (void)fetchData:(BOOL)shouldFetchContact completion:(FetchDataCompletion)completion {
     
-    [self fetchAndStoreContacts];
+    if (shouldFetchContact) {
+        [self fetchAndStoreContacts];
+    }
     
     NSArray<Location *> *locations = [self fetchContactsLocation];
     

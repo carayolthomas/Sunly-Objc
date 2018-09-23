@@ -9,6 +9,7 @@
 #import "ContactPermissionInteractor.h"
 #import "ContactHelper.h"
 #import "AppDelegate.h"
+#import "Constants.h"
 
 #import <Contacts/Contacts.h>
 
@@ -19,6 +20,10 @@
 - (void)storeContacts:(NSArray<CNContact *> *)contacts {
     NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
     [ContactHelper store:contacts with:managedObjectContext];
+}
+
+- (void)setUserAllowedContacts {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:UserAllowedContactsKey];
 }
 
 @end

@@ -17,4 +17,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:coordinate forKey:UserCoordinateKey];
 }
 
+- (void)setUserAllowedLocation {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:UserAllowedLocationKey];
+}
+
 @end

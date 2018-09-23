@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "OnBoardingNavigationController.h"
 #import "ContactPermissionRouter.h"
+#import "LocationPermissionRouter.h"
+#import "DashboardRouter.h"
+#import "Constants.h"
 
 #import <CoreData/CoreData.h>
 
@@ -22,7 +25,17 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = [[OnBoardingNavigationController alloc] initWithRootViewController:[ContactPermissionRouter createModule]];
+    UIViewController *rootViewController;
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:UserAllowedContactsKey]) {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:UserAllowedLocationKey]) {
+            rootViewController = [DashboardRouter createModule];
+        } else {
+            rootViewController = [LocationPermissionRouter createModule];
+        }
+    } else {
+        rootViewController = [ContactPermissionRouter createModule];
+    }
+    self.window.rootViewController = [[OnBoardingNavigationController alloc] initWithRootViewController:rootViewController];
     [self.window makeKeyAndVisible];
     
     return YES;

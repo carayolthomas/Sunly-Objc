@@ -14,5 +14,7 @@ NSString *const ContactPermissionViewControllerIdentifier = @"ContactPermissionV
 NSString *const LocationPermissionViewControllerIdentifier = @"LocationPermissionViewController";
 NSString *const UserGivenNameKey = @"UserGivenNameKey";
 NSString *const UserCoordinateKey = @"UserCoordinateKey";
+NSString *const UserAllowedContactsKey = @"UserAllowedContactsKey";
+NSString *const UserAllowedLocationKey = @"UserAllowedLocationKey";
 NSString *const DashboardViewControllerIdentifier = @"DashboardViewController";
 NSString *const WeatherCollectionViewCellIdentifier = @"WeatherCollectionViewCell";

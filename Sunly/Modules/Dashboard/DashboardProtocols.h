@@ -53,6 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 @property (nonatomic, weak, nullable) id<DashboardInteractorToPresenter> presenter;
 
+- (void)fetchForecastData;
 - (void)fetchContactsAndForecastData;
 - (void)getDashboardData;
 

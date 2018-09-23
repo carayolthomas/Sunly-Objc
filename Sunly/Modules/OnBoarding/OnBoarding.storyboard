@@ -13,9 +13,6 @@
         <array key="Montserrat-Medium.ttf">
             <string>Montserrat-Medium</string>
         </array>
-        <array key="Montserrat-Regular.ttf">
-            <string>Montserrat-Regular</string>
-        </array>
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
@@ -29,6 +26,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-sh-kpg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LgU-HG-02N">
                                 <rect key="frame" x="137.5" y="243.5" width="100" height="120"/>
                                 <constraints>
@@ -38,7 +38,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-YJ-vTR">
                                 <rect key="frame" x="24" y="387.5" width="327" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -63,8 +63,10 @@
                         <constraints>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="5oc-Dz-SHq" secondAttribute="trailing" constant="24" id="1dw-Lk-wuz"/>
                             <constraint firstItem="Xp1-l7-m8l" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" constant="24" id="4rS-Nn-cs4"/>
+                            <constraint firstAttribute="bottom" secondItem="Qog-sh-kpg" secondAttribute="bottom" id="ECe-tf-SAM"/>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="F90-YJ-vTR" secondAttribute="trailing" constant="24" id="HmX-5v-0mF"/>
                             <constraint firstItem="LgU-HG-02N" firstAttribute="centerX" secondItem="6d6-7C-5Bn" secondAttribute="centerX" id="Jdb-dR-oHc"/>
+                            <constraint firstItem="Qog-sh-kpg" firstAttribute="top" secondItem="1uM-gL-cDv" secondAttribute="top" id="UeG-9x-4sj"/>
                             <constraint firstItem="5oc-Dz-SHq" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" constant="24" id="VH1-LU-Ssv"/>
                             <constraint firstItem="Xp1-l7-m8l" firstAttribute="top" secondItem="6d6-7C-5Bn" secondAttribute="top" constant="48" id="WEp-0L-oj4"/>
                             <constraint firstItem="LgU-HG-02N" firstAttribute="centerY" secondItem="6d6-7C-5Bn" secondAttribute="centerY" constant="-40" id="av8-0g-cbG"/>
@@ -72,7 +74,9 @@
                             <constraint firstItem="F90-YJ-vTR" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" constant="24" id="g1d-YH-5AI"/>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="bottom" secondItem="5oc-Dz-SHq" secondAttribute="bottom" constant="24" id="hk7-JQ-mbf"/>
                             <constraint firstItem="F90-YJ-vTR" firstAttribute="top" secondItem="LgU-HG-02N" secondAttribute="bottom" constant="24" id="iRr-1h-rS3"/>
+                            <constraint firstItem="Qog-sh-kpg" firstAttribute="leading" secondItem="6d6-7C-5Bn" secondAttribute="leading" id="pQv-uz-D4f"/>
                             <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="Xp1-l7-m8l" secondAttribute="trailing" constant="24" id="xqn-yB-pbS"/>
+                            <constraint firstItem="6d6-7C-5Bn" firstAttribute="trailing" secondItem="Qog-sh-kpg" secondAttribute="trailing" id="xtb-7t-KJa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6d6-7C-5Bn"/>
                     </view>
@@ -95,6 +99,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-OO-zuL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jun-2k-rco">
                                 <rect key="frame" x="137.5" y="243.5" width="100" height="120"/>
                                 <constraints>
@@ -104,7 +111,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DV-hm-Ah8">
                                 <rect key="frame" x="24" y="387.5" width="327" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -130,10 +137,14 @@
                             <constraint firstItem="BIa-Ur-lLX" firstAttribute="leading" secondItem="FVA-i4-kZH" secondAttribute="leading" constant="24" id="1eH-yv-3nK"/>
                             <constraint firstItem="MS6-AF-iQS" firstAttribute="leading" secondItem="FVA-i4-kZH" secondAttribute="leading" constant="24" id="4DC-ZQ-2o6"/>
                             <constraint firstItem="2DV-hm-Ah8" firstAttribute="top" secondItem="jun-2k-rco" secondAttribute="bottom" constant="24" id="8ro-XR-uSx"/>
+                            <constraint firstItem="Zhz-OO-zuL" firstAttribute="trailing" secondItem="FVA-i4-kZH" secondAttribute="trailing" id="CEF-gU-3Qm"/>
                             <constraint firstItem="FVA-i4-kZH" firstAttribute="trailing" secondItem="BIa-Ur-lLX" secondAttribute="trailing" constant="24" id="HyK-4S-ud6"/>
                             <constraint firstItem="jun-2k-rco" firstAttribute="centerX" secondItem="FVA-i4-kZH" secondAttribute="centerX" id="W4e-kP-iWf"/>
+                            <constraint firstItem="Zhz-OO-zuL" firstAttribute="top" secondItem="hGt-8V-MPm" secondAttribute="top" id="WfV-QB-l4P"/>
                             <constraint firstItem="FVA-i4-kZH" firstAttribute="trailing" secondItem="2DV-hm-Ah8" secondAttribute="trailing" constant="24" id="Ya1-HN-rCG"/>
                             <constraint firstItem="2DV-hm-Ah8" firstAttribute="leading" secondItem="FVA-i4-kZH" secondAttribute="leading" constant="24" id="e2f-2o-1wS"/>
+                            <constraint firstAttribute="bottom" secondItem="Zhz-OO-zuL" secondAttribute="bottom" id="epj-Gj-1GH"/>
+                            <constraint firstItem="Zhz-OO-zuL" firstAttribute="leading" secondItem="FVA-i4-kZH" secondAttribute="leading" id="gw1-il-1TR"/>
                             <constraint firstItem="BIa-Ur-lLX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2DV-hm-Ah8" secondAttribute="bottom" constant="8" id="mOZ-W9-8P6"/>
                             <constraint firstItem="MS6-AF-iQS" firstAttribute="top" secondItem="FVA-i4-kZH" secondAttribute="top" constant="48" id="mtL-rW-Dvn"/>
                             <constraint firstItem="FVA-i4-kZH" firstAttribute="bottom" secondItem="BIa-Ur-lLX" secondAttribute="bottom" constant="24" id="n2g-uD-8iy"/>
@@ -155,4 +166,7 @@
             <point key="canvasLocation" x="167" y="-350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="572" height="910"/>
+    </resources>
 </document>

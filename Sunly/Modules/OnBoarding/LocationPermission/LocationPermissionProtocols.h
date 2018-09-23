@@ -74,7 +74,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<LocationPermissionInteractorToPresenter> presenter;
 
 /// Store the user coordinate
+/// - parameter: coordinate User coordinate to store
 - (void)storeUserCoordinate:(NSString *)coordinate;
+
+/// Set allowed location
+- (void)setUserAllowedLocation;
 
 @end
 

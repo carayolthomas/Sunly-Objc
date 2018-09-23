@@ -8,6 +8,7 @@
 
 #import "DashboardPresenter.h"
 #import "UIColor+Additions.h"
+#import "ContactHelper.h"
 
 #import "Location+CoreDataProperties.h"
 #import "Contact+CoreDataProperties.h"
@@ -50,7 +51,11 @@ NSString *const worstNextWeatherKey = @"e_worstNext";
     [[self view] showWelcomeMessage:NSLocalizedStringFromTable(@"DashboardWelcome", @"OnBoarding", @"")];
     [[self view] showComputing];
     self.startFetchDate = [NSDate date];
-    [[self interactor] fetchContactsAndForecastData];
+    if ([ContactHelper currentStatus] == CNAuthorizationStatusAuthorized) {
+        [[self interactor] fetchContactsAndForecastData];
+    } else {
+        [[self interactor] fetchForecastData];
+    }
 }
 
 - (NSInteger)numberOfSections {

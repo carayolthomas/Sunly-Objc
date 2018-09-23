@@ -70,6 +70,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// - parameter: contacts The contact list
 - (void)storeContacts:(NSArray<CNContact *> *)contacts;
 
+/// Set allowed contacts
+- (void)setUserAllowedContacts;
+
 @end
 
 #pragma mark - ContactPermissionPresenterToRouter

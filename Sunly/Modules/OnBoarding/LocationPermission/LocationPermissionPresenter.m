@@ -79,6 +79,7 @@
 }
 
 - (void)locationAuthorizedBehavior:(CLLocation *)location shouldTryAgain:(BOOL)again {
+    [[self interactor] setUserAllowedLocation];
     if (location) {
         [[self interactor] storeUserCoordinate:[NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
         [self handleNavigation];

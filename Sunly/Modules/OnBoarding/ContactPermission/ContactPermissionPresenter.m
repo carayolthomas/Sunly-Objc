@@ -70,6 +70,7 @@
 - (void)contactAuthorizedBehavior {
     NSArray<CNContact *> *contacts = [ContactHelper fetchContactWithAddress];
     [[self interactor] storeContacts:contacts];
+    [[self interactor] setUserAllowedContacts];
     [[self router] showNextStepFrom:[self view]];
 }
 
