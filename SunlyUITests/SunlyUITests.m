@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "XCUIApplication+Sunly.h"
 
 @interface SunlyUITests : XCTestCase
+
+@property (nonatomic, strong) XCUIApplication *app;
 
 @end
 
@@ -21,18 +24,40 @@
     self.continueAfterFailure = NO;
 
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
-
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    self.app = [[XCUIApplication alloc] init];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testAllowFlow {
+    
+    [self.app launch];
+    
+    XCTAssertTrue([self.app isDisplayingContactsPermission]);
+
+    [[self.app contactAllowButton] tap];
+    
+    [self addUIInterruptionMonitorWithDescription:@"Contacts" handler:^BOOL(XCUIElement * _Nonnull interruptingElement) {
+        [[[interruptingElement buttons] objectForKeyedSubscript:@"OK"] tap];
+        return YES;
+    }];
+    
+    [self.app tap];
+
+    XCTAssertTrue([self.app isDisplayingLocationPermission]);
+
+    [[self.app locationAllowButton] tap];
+
+    [self addUIInterruptionMonitorWithDescription:@"location" handler:^BOOL(XCUIElement * _Nonnull interruptingElement) {
+        [[[interruptingElement buttons] objectForKeyedSubscript:@"Allow"] tap];
+        return YES;
+    }];
+    
+    [self.app tap];
+    
+    XCTAssertTrue([self.app isDisplayingDashboard]);
 }
 
 @end

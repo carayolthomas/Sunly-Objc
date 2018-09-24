@@ -93,6 +93,9 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="dashboardView">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="1lj-d8-JV9" firstAttribute="trailing" secondItem="mIi-nb-32t" secondAttribute="trailing" id="3ty-r2-mub"/>
                             <constraint firstItem="mIi-nb-32t" firstAttribute="leading" secondItem="1lj-d8-JV9" secondAttribute="leading" id="Nsb-98-GyM"/>

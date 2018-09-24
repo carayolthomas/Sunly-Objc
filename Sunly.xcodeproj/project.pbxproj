@@ -55,6 +55,7 @@
 		AF06B2AF2157CBD4006CC80C /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
+		AF7F47A421595637002E584D /* XCUIApplication+Sunly.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F47A321595637002E584D /* XCUIApplication+Sunly.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
 		AF9DECCB21558CF300844449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECCA21558CF300844449 /* Assets.xcassets */; };
 		AF9DECCE21558CF300844449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DECCC21558CF300844449 /* LaunchScreen.storyboard */; };
@@ -153,6 +154,8 @@
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
 		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
+		AF7F47A221595620002E584D /* XCUIApplication+Sunly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+Sunly.h"; sourceTree = "<group>"; };
+		AF7F47A321595637002E584D /* XCUIApplication+Sunly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+Sunly.m"; sourceTree = "<group>"; };
 		AF9DECBE21558CF100844449 /* Sunly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9DECC121558CF100844449 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF9DECC221558CF100844449 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -426,6 +429,8 @@
 			isa = PBXGroup;
 			children = (
 				AF9DECE521558CF300844449 /* SunlyUITests.m */,
+				AF7F47A221595620002E584D /* XCUIApplication+Sunly.h */,
+				AF7F47A321595637002E584D /* XCUIApplication+Sunly.m */,
 				AF9DECE721558CF300844449 /* Info.plist */,
 			);
 			path = SunlyUITests;
@@ -486,6 +491,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF9DECF021558CF300844449 /* Build configuration list for PBXNativeTarget "SunlyUITests" */;
 			buildPhases = (
+				AF7F47A6215986C5002E584D /* ShellScript */,
 				A1B93D37D6A23199F0E75E4B /* [CP] Check Pods Manifest.lock */,
 				AF9DECDD21558CF300844449 /* Sources */,
 				AF9DECDE21558CF300844449 /* Frameworks */,
@@ -648,6 +654,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunly/Pods-Sunly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF7F47A6215986C5002E584D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/xcrun simctl uninstall booted com.appstud.Sunly\n";
+		};
 		D01A56F1D49E79B616BFE3E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9DECE621558CF300844449 /* SunlyUITests.m in Sources */,
+				AF7F47A421595637002E584D /* XCUIApplication+Sunly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
