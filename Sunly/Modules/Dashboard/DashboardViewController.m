@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.dataSource = self;
+    self.collectionView.isAccessibilityElement = YES;
+    self.collectionView.accessibilityIdentifier = @"Shadow";
     [[self presenter] viewDidLoad];
 }
 

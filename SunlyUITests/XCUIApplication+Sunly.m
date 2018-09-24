@@ -28,7 +28,7 @@
 }
 
 - (BOOL)isDisplayingDashboard {
-    return [[[self otherElements] objectForKeyedSubscript:@"dashboardView"] exists];
+    return [[[self collectionViews] objectForKeyedSubscript:@"Shadow"] exists];
 }
 
 @end
