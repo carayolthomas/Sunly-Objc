@@ -127,7 +127,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Return the background image
 /// - parameter: indexPath
-- (UIImage *)image:(NSIndexPath *)indexPath;
+- (UIImage *__nullable)image:(NSIndexPath *)indexPath;
 
 /// Return the shadow color
 /// - parameter: indexPath

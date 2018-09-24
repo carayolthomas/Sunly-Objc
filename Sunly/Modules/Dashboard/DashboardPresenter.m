@@ -45,17 +45,27 @@ NSString *const worstNextWeatherKey = @"e_worstNext";
     return self;
 }
 
-#pragma mark - DashboardViewToPresenter
-
-- (void)viewDidLoad {
-    [[self view] showWelcomeMessage:NSLocalizedStringFromTable(@"DashboardWelcome", @"OnBoarding", @"")];
-    [[self view] showComputing];
-    self.startFetchDate = [NSDate date];
+- (void)fetchData {
     if ([ContactHelper currentStatus] == CNAuthorizationStatusAuthorized) {
         [[self interactor] fetchContactsAndForecastData];
     } else {
         [[self interactor] fetchForecastData];
     }
+}
+
+#pragma mark - DashboardViewToPresenter
+
+- (void)viewDidLoad {
+    
+    __weak DashboardPresenter *weakSelf = self;
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        [weakSelf fetchData];
+    }];
+    
+    [[self view] showWelcomeMessage:NSLocalizedStringFromTable(@"DashboardWelcome", @"OnBoarding", @"")];
+    [[self view] showComputing];
+    self.startFetchDate = [NSDate date];
+    [self fetchData];
 }
 
 - (NSInteger)numberOfSections {
