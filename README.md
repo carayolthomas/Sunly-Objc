@@ -12,6 +12,9 @@ At the very beginning, I had to build a weather app for getting hired at [Shadow
 
 Of course, I am still hoping to join the [Shadow](https://shadow.tech) 💻
 
+## 💻 Requirements
+Sunly is written in Objective-C and supports iOS 11.0+. Built with Xcode 10.
+
 ## 🐍 Architecture
 I decided to deal with this app like it could become a big one. So I've used the [VIPER](https://medium.com/@smalam119/viper-design-pattern-for-ios-application-development-7a9703902af6) architectural pattern.
 This is a kind of Clean Architecture for iOS applications.
