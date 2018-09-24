@@ -491,7 +491,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF9DECF021558CF300844449 /* Build configuration list for PBXNativeTarget "SunlyUITests" */;
 			buildPhases = (
-				AF7F47A6215986C5002E584D /* ShellScript */,
 				A1B93D37D6A23199F0E75E4B /* [CP] Check Pods Manifest.lock */,
 				AF9DECDD21558CF300844449 /* Sources */,
 				AF9DECDE21558CF300844449 /* Frameworks */,
@@ -653,23 +652,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunly/Pods-Sunly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		AF7F47A6215986C5002E584D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/bin/xcrun simctl uninstall booted com.appstud.Sunly\n";
 		};
 		D01A56F1D49E79B616BFE3E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
