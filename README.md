@@ -43,7 +43,6 @@ Open `Sunly.xcworkspace`
 Build & Run 🔥
 
 ## 🦁 TODO
- - Fetch data when app goes from background to foreground
  - Unit testing
  - UI testing
 
