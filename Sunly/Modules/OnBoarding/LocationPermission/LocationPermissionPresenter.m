@@ -82,7 +82,6 @@
     [[self interactor] setUserAllowedLocation];
     if (location) {
         [[self interactor] storeUserCoordinate:[NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
-        [self handleNavigation];
     } else if (again) {
         [[self view] disableNextButton];
         [[self view] configureSearching];
@@ -107,6 +106,16 @@
     dispatch_once(&onceToken, ^{
         [[self router] showNextStepFrom:self.view];
     });
+}
+
+#pragma mark - LocationPermissionInteractorToPresenter
+
+- (void)userLocationStoredError {
+    [self handleNavigation];
+}
+
+- (void)userLocationStoredSuccess {
+    [self handleNavigation];
 }
 
 #pragma mark - Location

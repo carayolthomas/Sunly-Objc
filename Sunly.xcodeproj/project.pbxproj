@@ -286,17 +286,17 @@
 			children = (
 				AF06B2AC2157CBBE006CC80C /* Cell */,
 				AF06B2A721570DD1006CC80C /* compute-data-animation.json */,
-				AF06B2942156D57E006CC80C /* Dashboard.strings */,
 				AF06B2962156D58F006CC80C /* Dashboard.storyboard */,
+				AF06B2942156D57E006CC80C /* Dashboard.strings */,
 				AF06B29C2156D6CA006CC80C /* DashboardProtocols.h */,
-				AF06B29A2156D6CA006CC80C /* DashboardViewController.h */,
-				AF06B29F2156D6CA006CC80C /* DashboardViewController.m */,
 				AF06B29D2156D6CA006CC80C /* DashboardInteractor.h */,
 				AF06B2982156D6CA006CC80C /* DashboardInteractor.m */,
 				AF06B29B2156D6CA006CC80C /* DashboardPresenter.h */,
 				AF06B2A02156D6CA006CC80C /* DashboardPresenter.m */,
 				AF06B29E2156D6CA006CC80C /* DashboardRouter.h */,
 				AF06B2992156D6CA006CC80C /* DashboardRouter.m */,
+				AF06B29A2156D6CA006CC80C /* DashboardViewController.h */,
+				AF06B29F2156D6CA006CC80C /* DashboardViewController.m */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";

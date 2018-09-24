@@ -12,6 +12,7 @@
 #import "Location+CoreDataProperties.h"
 #import "Weather+CoreDataProperties.h"
 #import "ContactHelper.h"
+#import "LocationHelper.h"
 #import "Constants.h"
 
 #import <CoreLocation/CoreLocation.h>
@@ -56,23 +57,7 @@ typedef void(^FetchDataCompletion)(BOOL finished);
 #pragma mark - Private
 
 - (Weather *)getUserCurrentForecast {
-    NSString *coordinate = [[NSUserDefaults standardUserDefaults] objectForKey:UserCoordinateKey];
-    
-    if (!coordinate) {
-        return nil;
-    }
-    
-    double latitude = [[[coordinate componentsSeparatedByString:@","] firstObject] doubleValue];
-    double longitude = [[[coordinate componentsSeparatedByString:@","] lastObject] doubleValue];
-    
-    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    [geocoder reverseGeocodeLocation:[[CLLocation alloc] initWithLatitude:latitude longitude:longitude] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        if (error) {
-            
-        }
-    }]
-    
-    return nil;
+    return [LocationHelper userLocation].weather;
 }
 
 - (Weather *)getBestCurrentForecast {
@@ -128,11 +113,10 @@ typedef void(^FetchDataCompletion)(BOOL finished);
         [self fetchAndStoreContacts];
     }
     
-    NSArray<Location *> *locations = [self fetchContactsLocation];
+    NSArray<Location *> *contactsLocation = [self fetchContactsLocation];
+    Location *userLocation = [LocationHelper userLocation];
     
-    if (locations) {
-        [self getForecast:locations completion:completion];
-    }
+    [self getForecast:contactsLocation userLocation:userLocation completion:completion];
 }
 
 #pragma mark - Helper functions
@@ -161,14 +145,25 @@ typedef void(^FetchDataCompletion)(BOOL finished);
 
 /// Fetch the forecast for each location
 /// TODO: We should set the key in CI for dynamic biding at compile time
-- (void)getForecast:(NSArray<Location *> *)locations completion:(FetchDataCompletion)completion {
+- (void)getForecast:(NSArray<Location *> *)contactsLocation userLocation:(Location *)userLocation completion:(FetchDataCompletion)completion {
     
     self.dispatchGroup = dispatch_group_create();
     
-    for (Location *location in locations) {
-        if (location.coordinate) {
-            [self getForecast:location.city country:location.country key:@"a7d0b3b63b8de23058d6ce9e4bf77ec2" coordinate:location.coordinate exclude:@[@"minutely", @"hourly", @"alerts", @"flags"] language:@"fr" units:@"si"];
+    NSString *key = @"a7d0b3b63b8de23058d6ce9e4bf77ec2";
+    NSArray *exclude = @[@"minutely", @"hourly", @"alerts", @"flags"];
+    NSString *language = @"fr";
+    NSString *units = @"si";
+    
+    if (contactsLocation) {
+        for (Location *location in contactsLocation) {
+            if (location.coordinate) {
+                [self getForecast:location.city country:location.country key:key coordinate:location.coordinate exclude:exclude language:language units:units];
+            }
         }
+    }
+    
+    if (userLocation) {
+        [self getForecast:userLocation.city country:userLocation.country key:key coordinate:userLocation.coordinate exclude:exclude language:language units:units];
     }
     
     dispatch_group_wait(self.dispatchGroup, 20.f);

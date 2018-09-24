@@ -7,6 +7,9 @@
 //
 
 #import "LocationHelper.h"
+#import "Constants.h"
+#import "AppDelegate.h"
+
 #import <CoreLocation/CoreLocation.h>
 
 @interface LocationHelper () <CLLocationManagerDelegate>
@@ -21,6 +24,16 @@
 /// Current location authorization status
 + (CLAuthorizationStatus)currentStatus {
     return [CLLocationManager authorizationStatus];
+}
+
++ (Location *)userLocation {
+    NSString *city = [[NSUserDefaults standardUserDefaults] objectForKey:UserCityKey];
+    NSString *country = [[NSUserDefaults standardUserDefaults] objectForKey:UserCountryKey];
+    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
+    NSError *error;
+    NSFetchRequest *existingRequest = [NSFetchRequest fetchRequestWithEntityName:@"Location"];
+    [existingRequest setPredicate:[NSPredicate predicateWithFormat:@"(city == %@) AND (country == %@)", city, country]];
+    return [managedObjectContext executeFetchRequest:existingRequest error:&error].firstObject;
 }
 
 /// Request location permission and return a location if possible

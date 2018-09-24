@@ -16,6 +16,8 @@ FOUNDATION_EXPORT NSString *const ContactPermissionViewControllerIdentifier;
 FOUNDATION_EXPORT NSString *const LocationPermissionViewControllerIdentifier;
 FOUNDATION_EXPORT NSString *const UserGivenNameKey;
 FOUNDATION_EXPORT NSString *const UserCoordinateKey;
+FOUNDATION_EXPORT NSString *const UserCityKey;
+FOUNDATION_EXPORT NSString *const UserCountryKey;
 FOUNDATION_EXPORT NSString *const UserAllowedContactsKey;
 FOUNDATION_EXPORT NSString *const UserAllowedLocationKey;
 FOUNDATION_EXPORT NSString *const DashboardViewControllerIdentifier;

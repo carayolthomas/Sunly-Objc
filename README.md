@@ -43,7 +43,7 @@ Open `Sunly.xcworkspace`
 Build & Run 🔥
 
 ## 🦁 TODO
- - Fetch current weather for user location
+ - Fetch data when app goes from background to foreground
  - Unit testing
  - UI testing
 

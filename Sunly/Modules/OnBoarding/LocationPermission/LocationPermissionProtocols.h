@@ -15,6 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Delegates from the interactor (api/storage) to the presenter (business rules)
 @protocol LocationPermissionInteractorToPresenter <NSObject>
+
+/// Callback when coordinate, city and country stored
+- (void)userLocationStoredSuccess;
+
+/// Callback when coordinate, city and country couldn't be stored
+- (void)userLocationStoredError;
+
 @end
 
 #pragma mark - LocationPermissionPresenterToView

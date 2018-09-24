@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location+CoreDataProperties.h"
 
 @import CoreLocation;
 
@@ -18,6 +19,9 @@ typedef void(^LocationCompletion)(CLLocation *__nullable location, CLAuthorizati
 
 /// Current location authorization status
 + (CLAuthorizationStatus)currentStatus;
+
+/// Retrieve the user location
++ (Location * __nullable)userLocation;
 
 /// Request location permission and return a location if possible
 - (void)askLocationPermission:(LocationCompletion)completion;
