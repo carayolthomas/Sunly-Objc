@@ -57,7 +57,7 @@
     
     [self.app tap];
     
-    XCTAssertTrue([self.app isDisplayingDashboard]);
+    XCTAssertFalse([self.app isDisplayingLocationPermission]);
 }
 
 @end

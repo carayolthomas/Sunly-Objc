@@ -18,8 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isDisplayingLocationPermission;
 - (XCUIElement *)locationAllowButton;
 
-- (BOOL)isDisplayingDashboard;
-
 @end
 
 NS_ASSUME_NONNULL_END

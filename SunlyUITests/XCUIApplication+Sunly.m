@@ -27,8 +27,4 @@
     return [[self buttons] objectForKeyedSubscript:@"locationAllowButtonIdentifier"];
 }
 
-- (BOOL)isDisplayingDashboard {
-    return [[[self collectionViews] objectForKeyedSubscript:@"Shadow"] exists];
-}
-
 @end
