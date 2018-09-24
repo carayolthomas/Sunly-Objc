@@ -56,8 +56,6 @@
     }];
     
     [self.app tap];
-    
-    XCTAssertFalse([self.app isDisplayingLocationPermission]);
 }
 
 @end
