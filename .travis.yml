@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode10
 xcode_workspace: Sunly.xcworkspace
 xcode_scheme: Sunly
-xcode_destination: platform=iOS Simulator,name=iPhone 8,OS=12.0
+xcode_destination: platform=iOS Simulator,name=iPhone 7,OS=12.0
 before_install:
   - pod repo update
 after_success:
