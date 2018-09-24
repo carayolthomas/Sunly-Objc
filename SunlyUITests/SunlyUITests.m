@@ -57,7 +57,9 @@
     
     [self.app tap];
     
-    XCTAssertTrue([self.app isDisplayingDashboard]);
+    NSPredicate *dashboardPredicate = [NSPredicate predicateWithFormat:@"exists == 1"];
+    XCTestExpectation *dashboardExpectation = [self expectationForPredicate:dashboardPredicate evaluatedWithObject:[[self.app otherElements] objectForKeyedSubscript:@"dashboardView"] handler:nil];
+    [self waitForExpectations:@[dashboardExpectation] timeout:5.f];
 }
 
 @end
