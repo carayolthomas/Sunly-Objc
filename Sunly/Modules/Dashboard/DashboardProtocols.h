@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)fetchContactsAndForecastData;
 
 /// Compute dashboard data from storage
-- (void)getDashboardData;
+- (void)getDashboardData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults;
 
 @end
 

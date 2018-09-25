@@ -43,26 +43,26 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     }];
 }
 
-- (void)getDashboardData {
+- (void)getDashboardData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults {
     
-    Weather *current = [self getUserCurrentForecast];
-    Weather *bestCurrent = [self getBestCurrentForecast];
-    Weather *worstCurrent = [self getWorstCurrentForecast];
-    Weather *bestNext = [self getBestNextWeekendForecast];
-    Weather *worstNext = [self getWorstNextWeekendForecast];
+    Weather *current = [self getUserCurrentForecast:userDefaults persistentContainer:persistantContainer];
+    Weather *bestCurrent = [self getBestCurrentForecast:persistantContainer];
+    Weather *worstCurrent = [self getWorstCurrentForecast:persistantContainer];
+    Weather *bestNext = [self getBestNextWeekendForecast:persistantContainer];
+    Weather *worstNext = [self getWorstNextWeekendForecast:persistantContainer];
     
     [[self presenter] currentWeather:current bestCurrent:bestCurrent worstCurrent:worstCurrent bestNext:bestNext worstNext:worstNext];
 }
 
 #pragma mark - Private
 
-- (Weather *)getUserCurrentForecast {
-    return [LocationHelper userLocation].weather;
+- (Weather *)getUserCurrentForecast:(NSUserDefaults *)userDefaults persistentContainer:(NSPersistentContainer *)persistentContainer {
+    return [LocationHelper userLocation:userDefaults persistentContainer:persistentContainer].weather;
 }
 
-- (Weather *)getBestCurrentForecast {
+- (Weather *)getBestCurrentForecast:(NSPersistentContainer *)persistantContainer {
     NSError *error;
-    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
+    NSManagedObjectContext *managedObjectContext = [persistantContainer viewContext];
     NSFetchRequest *weatherRequest = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
     [weatherRequest setFetchLimit:1];
     NSSortDescriptor *sortScore = [NSSortDescriptor sortDescriptorWithKey:@"currentScore" ascending:NO];
@@ -71,9 +71,9 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     return weather.firstObject;
 }
 
-- (Weather *)getWorstCurrentForecast {
+- (Weather *)getWorstCurrentForecast:(NSPersistentContainer *)persistantContainer {
     NSError *error;
-    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
+    NSManagedObjectContext *managedObjectContext = [persistantContainer viewContext];
     NSFetchRequest *weatherRequest = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
     [weatherRequest setFetchLimit:1];
     NSSortDescriptor *sortScore = [NSSortDescriptor sortDescriptorWithKey:@"currentScore" ascending:YES];
@@ -82,9 +82,9 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     return weather.firstObject;
 }
 
-- (Weather *)getBestNextWeekendForecast {
+- (Weather *)getBestNextWeekendForecast:(NSPersistentContainer *)persistantContainer {
     NSError *error;
-    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
+    NSManagedObjectContext *managedObjectContext = [persistantContainer viewContext];
     NSFetchRequest *weatherRequest = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
     [weatherRequest setFetchLimit:1];
     NSSortDescriptor *sortScore = [NSSortDescriptor sortDescriptorWithKey:@"nextWeekendScore" ascending:NO];
@@ -93,9 +93,9 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     return weather.firstObject;
 }
 
-- (Weather *)getWorstNextWeekendForecast {
+- (Weather *)getWorstNextWeekendForecast:(NSPersistentContainer *)persistantContainer {
     NSError *error;
-    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
+    NSManagedObjectContext *managedObjectContext = [persistantContainer viewContext];
     NSFetchRequest *weatherRequest = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
     [weatherRequest setFetchLimit:1];
     NSSortDescriptor *sortScore = [NSSortDescriptor sortDescriptorWithKey:@"nextWeekendScore" ascending:YES];
@@ -114,7 +114,7 @@ typedef void(^FetchDataCompletion)(BOOL finished);
     }
     
     NSArray<Location *> *contactsLocation = [self fetchContactsLocation];
-    Location *userLocation = [LocationHelper userLocation];
+    Location *userLocation = [LocationHelper userLocation:[NSUserDefaults standardUserDefaults] persistentContainer:[AppDelegate persistentContainer]];
     
     [self getForecast:contactsLocation userLocation:userLocation completion:completion];
 }

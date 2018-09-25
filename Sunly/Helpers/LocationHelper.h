@@ -21,7 +21,7 @@ typedef void(^LocationCompletion)(CLLocation *__nullable location, CLAuthorizati
 + (CLAuthorizationStatus)currentStatus;
 
 /// Retrieve the user location
-+ (Location * __nullable)userLocation;
++ (Location *__nullable)userLocation:(NSUserDefaults *)userDefaults persistentContainer:(NSPersistentContainer *)persistentContainer;
 
 /// Request location permission and return a location if possible
 - (void)askLocationPermission:(LocationCompletion)completion;

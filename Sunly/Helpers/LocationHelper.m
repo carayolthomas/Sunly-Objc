@@ -26,10 +26,10 @@
     return [CLLocationManager authorizationStatus];
 }
 
-+ (Location *)userLocation {
-    NSString *city = [[NSUserDefaults standardUserDefaults] objectForKey:UserCityKey];
-    NSString *country = [[NSUserDefaults standardUserDefaults] objectForKey:UserCountryKey];
-    NSManagedObjectContext *managedObjectContext = [[AppDelegate persistentContainer] viewContext];
++ (Location *)userLocation:(NSUserDefaults *)userDefaults persistentContainer:(NSPersistentContainer *)persistentContainer {
+    NSString *city = [userDefaults objectForKey:UserCityKey];
+    NSString *country = [userDefaults objectForKey:UserCountryKey];
+    NSManagedObjectContext *managedObjectContext = [persistentContainer viewContext];
     NSError *error;
     NSFetchRequest *existingRequest = [NSFetchRequest fetchRequestWithEntityName:@"Location"];
     [existingRequest setPredicate:[NSPredicate predicateWithFormat:@"(city == %@) AND (country == %@)", city, country]];

@@ -54,6 +54,10 @@
 		AF06B2A821570DD1006CC80C /* compute-data-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AF06B2A721570DD1006CC80C /* compute-data-animation.json */; };
 		AF06B2AF2157CBD4006CC80C /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */; };
 		AF1547C921559B0C00347AF7 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */; };
+		AF1EEE5A215AD13800228C8F /* DashboardRouter+Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEE59215AD13800228C8F /* DashboardRouter+Mock.m */; };
+		AF1EEE5D215AD15800228C8F /* DashboardInteractor+Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEE5C215AD15800228C8F /* DashboardInteractor+Mock.m */; };
+		AF1EEE60215AD17B00228C8F /* DashboardViewController+Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEE5F215AD17B00228C8F /* DashboardViewController+Mock.m */; };
+		AF1EEE61215AD3BE00228C8F /* Sunly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF06B27321566B3D006CC80C /* Sunly.xcdatamodeld */; };
 		AF3D6BEF2155A11700E71F49 /* ContactPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */; };
 		AF7F47A421595637002E584D /* XCUIApplication+Sunly.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F47A321595637002E584D /* XCUIApplication+Sunly.m */; };
 		AF9DECC321558CF100844449 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DECC221558CF100844449 /* AppDelegate.m */; };
@@ -152,6 +156,12 @@
 		AF06B2AD2157CBD4006CC80C /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
 		AF06B2AE2157CBD4006CC80C /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
 		AF1547C821559B0C00347AF7 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		AF1EEE58215AD13800228C8F /* DashboardRouter+Mock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DashboardRouter+Mock.h"; sourceTree = "<group>"; };
+		AF1EEE59215AD13800228C8F /* DashboardRouter+Mock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DashboardRouter+Mock.m"; sourceTree = "<group>"; };
+		AF1EEE5B215AD15800228C8F /* DashboardInteractor+Mock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DashboardInteractor+Mock.h"; sourceTree = "<group>"; };
+		AF1EEE5C215AD15800228C8F /* DashboardInteractor+Mock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DashboardInteractor+Mock.m"; sourceTree = "<group>"; };
+		AF1EEE5E215AD17B00228C8F /* DashboardViewController+Mock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DashboardViewController+Mock.h"; sourceTree = "<group>"; };
+		AF1EEE5F215AD17B00228C8F /* DashboardViewController+Mock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DashboardViewController+Mock.m"; sourceTree = "<group>"; };
 		AF3D6BED2155A11700E71F49 /* ContactPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactPermissionViewController.h; sourceTree = "<group>"; };
 		AF3D6BEE2155A11700E71F49 /* ContactPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactPermissionViewController.m; sourceTree = "<group>"; };
 		AF7F47A221595620002E584D /* XCUIApplication+Sunly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+Sunly.h"; sourceTree = "<group>"; };
@@ -420,6 +430,12 @@
 			isa = PBXGroup;
 			children = (
 				AF9DECDA21558CF300844449 /* SunlyTests.m */,
+				AF1EEE58215AD13800228C8F /* DashboardRouter+Mock.h */,
+				AF1EEE59215AD13800228C8F /* DashboardRouter+Mock.m */,
+				AF1EEE5B215AD15800228C8F /* DashboardInteractor+Mock.h */,
+				AF1EEE5C215AD15800228C8F /* DashboardInteractor+Mock.m */,
+				AF1EEE5E215AD17B00228C8F /* DashboardViewController+Mock.h */,
+				AF1EEE5F215AD17B00228C8F /* DashboardViewController+Mock.m */,
 				AF9DECDC21558CF300844449 /* Info.plist */,
 			);
 			path = SunlyTests;
@@ -709,6 +725,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9DECDB21558CF300844449 /* SunlyTests.m in Sources */,
+				AF1EEE61215AD3BE00228C8F /* Sunly.xcdatamodeld in Sources */,
+				AF1EEE60215AD17B00228C8F /* DashboardViewController+Mock.m in Sources */,
+				AF1EEE5A215AD13800228C8F /* DashboardRouter+Mock.m in Sources */,
+				AF1EEE5D215AD15800228C8F /* DashboardInteractor+Mock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

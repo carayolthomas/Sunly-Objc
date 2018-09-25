@@ -9,6 +9,7 @@
 #import "DashboardPresenter.h"
 #import "UIColor+Additions.h"
 #import "ContactHelper.h"
+#import "AppDelegate.h"
 
 #import "Location+CoreDataProperties.h"
 #import "Contact+CoreDataProperties.h"
@@ -280,7 +281,7 @@ NSString *const worstNextWeatherKey = @"e_worstNext";
 }
 
 - (void)fetchContactsAndForecastDataFinished {
-    [[self interactor] getDashboardData];
+    [[self interactor] getDashboardData:[AppDelegate persistentContainer] userDefaults:[NSUserDefaults standardUserDefaults]];
 }
 
 - (void)getForecastError:(nonnull NSString *)city country:(nonnull NSString *)country {
