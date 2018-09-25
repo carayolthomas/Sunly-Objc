@@ -72,10 +72,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<DashboardInteractorToPresenter> presenter;
 
 /// Fetch forecast from API
-- (void)fetchForecastData;
+- (void)fetchForecastData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults;
 
 /// Fetch contacts from address book and then fetch forecast from API
-- (void)fetchContactsAndForecastData;
+- (void)fetchContactsAndForecastData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults;
 
 /// Compute dashboard data from storage
 - (void)getDashboardData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults;

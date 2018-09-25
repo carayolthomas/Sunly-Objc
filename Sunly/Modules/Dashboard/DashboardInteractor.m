@@ -29,14 +29,14 @@ typedef void(^FetchDataCompletion)(BOOL finished);
 
 @synthesize presenter;
 
-- (void)fetchForecastData {
+- (void)fetchForecastData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults {
     __weak DashboardInteractor *weakSelf = self;
     [self fetchData:NO completion:^(BOOL finished) {
         [[weakSelf presenter] fetchContactsAndForecastDataFinished];
     }];
 }
 
-- (void)fetchContactsAndForecastData {
+- (void)fetchContactsAndForecastData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults {
     __weak DashboardInteractor *weakSelf = self;
     [self fetchData:YES completion:^(BOOL finished) {
         [[weakSelf presenter] fetchContactsAndForecastDataFinished];

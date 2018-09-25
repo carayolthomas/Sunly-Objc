@@ -15,15 +15,19 @@
 
 @synthesize presenter;
 
-- (void)fetchContactsAndForecastData {
+- (void)fetchContactsAndForecastData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults {
     
     // 5 mock contacts
     
-    [self insertMockContact:@"Thomas" identifier:@"1" persistentContainer:<#(nonnull NSPersistentContainer *)#>]
+    Contact *c1 = [self insertMockContact:@"Thomas" identifier:@"1" persistentContainer:persistantContainer];
+    Contact *c2 = [self insertMockContact:@"Robin" identifier:@"2" persistentContainer:persistantContainer];
+    Contact *c3 = [self insertMockContact:@"Marion" identifier:@"3" persistentContainer:persistantContainer];
+    Contact *c4 = [self insertMockContact:@"Sarah" identifier:@"4" persistentContainer:persistantContainer];
+    Contact *c5 = [self insertMockContact:@"Shadow" identifier:@"5" persistentContainer:persistantContainer];
     
 }
 
-- (void)fetchForecastData {
+- (void)fetchForecastData:(NSPersistentContainer *)persistantContainer userDefaults:(NSUserDefaults *)userDefaults {
     
 }
 

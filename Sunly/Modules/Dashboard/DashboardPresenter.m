@@ -48,9 +48,9 @@ NSString *const worstNextWeatherKey = @"e_worstNext";
 
 - (void)fetchData {
     if ([ContactHelper currentStatus] == CNAuthorizationStatusAuthorized) {
-        [[self interactor] fetchContactsAndForecastData];
+        [[self interactor] fetchContactsAndForecastData:[AppDelegate persistentContainer] userDefaults:[NSUserDefaults standardUserDefaults]];
     } else {
-        [[self interactor] fetchForecastData];
+        [[self interactor] fetchForecastData:[AppDelegate persistentContainer] userDefaults:[NSUserDefaults standardUserDefaults]];
     }
 }
 
